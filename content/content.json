@@ -1,0 +1,1133 @@
+[
+  {
+    "id": 1,
+    "title": "Datenschutz: Modul 1",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf DSGVO.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit",
+      "DSGVO",
+      "Datenschutz-Grundverordnung",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Datenschutz: Modul 2",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf personenbezogene Daten.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Datenschutz: Modul 3",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf Datensicherheit.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit",
+      "DSGVO",
+      "Datenschutz-Grundverordnung",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Datenschutz: Modul 4",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf DSGVO.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Datenschutz: Modul 5",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf personenbezogene Daten.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit",
+      "DSGVO",
+      "Datenschutz-Grundverordnung",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Datenschutz: Modul 6",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf Datensicherheit.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Datenschutz: Modul 7",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf DSGVO.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit",
+      "DSGVO",
+      "Datenschutz-Grundverordnung",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Datenschutz: Modul 8",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf personenbezogene Daten.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Datenschutz: Modul 9",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf Datensicherheit.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit",
+      "DSGVO",
+      "Datenschutz-Grundverordnung",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Datenschutz: Modul 10",
+    "description": "Einführung in datenschutz mit Schwerpunkt auf DSGVO.",
+    "tags": [
+      "Datenschutz",
+      "DSGVO",
+      "personenbezogene Daten",
+      "Datensicherheit"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "IT-Sicherheit: Modul 1",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Passwort.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing",
+      "E-Mail",
+      "Email",
+      "Mail"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "IT-Sicherheit: Modul 2",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Firewall.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "IT-Sicherheit: Modul 3",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Phishing.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing",
+      "E-Mail",
+      "Email",
+      "Mail"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "IT-Sicherheit: Modul 4",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Passwort.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "IT-Sicherheit: Modul 5",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Firewall.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing",
+      "E-Mail",
+      "Email",
+      "Mail"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "IT-Sicherheit: Modul 6",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Phishing.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "IT-Sicherheit: Modul 7",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Passwort.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing",
+      "E-Mail",
+      "Email",
+      "Mail"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "IT-Sicherheit: Modul 8",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Firewall.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "IT-Sicherheit: Modul 9",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Phishing.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing",
+      "E-Mail",
+      "Email",
+      "Mail"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "IT-Sicherheit: Modul 10",
+    "description": "Einführung in it-sicherheit mit Schwerpunkt auf Passwort.",
+    "tags": [
+      "IT-Sicherheit",
+      "Passwort",
+      "Firewall",
+      "Phishing"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Arbeitsschutz: Modul 1",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf PSA.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Arbeitsschutz: Modul 2",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf Schutzkleidung.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Arbeitsschutz: Modul 3",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf Unfall.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Arbeitsschutz: Modul 4",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf PSA.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Arbeitsschutz: Modul 5",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf Schutzkleidung.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Arbeitsschutz: Modul 6",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf Unfall.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Arbeitsschutz: Modul 7",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf PSA.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Arbeitsschutz: Modul 8",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf Schutzkleidung.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Arbeitsschutz: Modul 9",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf Unfall.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Arbeitsschutz: Modul 10",
+    "description": "Einführung in arbeitsschutz mit Schwerpunkt auf PSA.",
+    "tags": [
+      "Arbeitsschutz",
+      "PSA",
+      "Schutzkleidung",
+      "Unfall"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Brandschutz: Modul 1",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Feuerlöscher.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Brandschutz: Modul 2",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Evakuierung.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Brandschutz: Modul 3",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Brandmelder.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Brandschutz: Modul 4",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Feuerlöscher.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Brandschutz: Modul 5",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Evakuierung.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Brandschutz: Modul 6",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Brandmelder.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Brandschutz: Modul 7",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Feuerlöscher.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Brandschutz: Modul 8",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Evakuierung.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Brandschutz: Modul 9",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Brandmelder.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Brandschutz: Modul 10",
+    "description": "Einführung in brandschutz mit Schwerpunkt auf Feuerlöscher.",
+    "tags": [
+      "Brandschutz",
+      "Feuerlöscher",
+      "Evakuierung",
+      "Brandmelder"
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Compliance: Modul 1",
+    "description": "Einführung in compliance mit Schwerpunkt auf Richtlinien.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 42,
+    "title": "Compliance: Modul 2",
+    "description": "Einführung in compliance mit Schwerpunkt auf Korruption.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Compliance: Modul 3",
+    "description": "Einführung in compliance mit Schwerpunkt auf Hinweisgeber.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Compliance: Modul 4",
+    "description": "Einführung in compliance mit Schwerpunkt auf Richtlinien.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Compliance: Modul 5",
+    "description": "Einführung in compliance mit Schwerpunkt auf Korruption.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 46,
+    "title": "Compliance: Modul 6",
+    "description": "Einführung in compliance mit Schwerpunkt auf Hinweisgeber.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 47,
+    "title": "Compliance: Modul 7",
+    "description": "Einführung in compliance mit Schwerpunkt auf Richtlinien.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Compliance: Modul 8",
+    "description": "Einführung in compliance mit Schwerpunkt auf Korruption.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Compliance: Modul 9",
+    "description": "Einführung in compliance mit Schwerpunkt auf Hinweisgeber.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Compliance: Modul 10",
+    "description": "Einführung in compliance mit Schwerpunkt auf Richtlinien.",
+    "tags": [
+      "Compliance",
+      "Richtlinien",
+      "Korruption",
+      "Hinweisgeber"
+    ]
+  },
+  {
+    "id": 51,
+    "title": "Kommunikation: Modul 1",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Feedback.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 52,
+    "title": "Kommunikation: Modul 2",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Meeting.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 53,
+    "title": "Kommunikation: Modul 3",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Konflikt.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 54,
+    "title": "Kommunikation: Modul 4",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Feedback.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 55,
+    "title": "Kommunikation: Modul 5",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Meeting.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 56,
+    "title": "Kommunikation: Modul 6",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Konflikt.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 57,
+    "title": "Kommunikation: Modul 7",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Feedback.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Kommunikation: Modul 8",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Meeting.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 59,
+    "title": "Kommunikation: Modul 9",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Konflikt.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 60,
+    "title": "Kommunikation: Modul 10",
+    "description": "Einführung in kommunikation mit Schwerpunkt auf Feedback.",
+    "tags": [
+      "Kommunikation",
+      "Feedback",
+      "Meeting",
+      "Konflikt"
+    ]
+  },
+  {
+    "id": 61,
+    "title": "Führung: Modul 1",
+    "description": "Einführung in führung mit Schwerpunkt auf Motivation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 62,
+    "title": "Führung: Modul 2",
+    "description": "Einführung in führung mit Schwerpunkt auf Mitarbeitergespräch.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 63,
+    "title": "Führung: Modul 3",
+    "description": "Einführung in führung mit Schwerpunkt auf Delegation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 64,
+    "title": "Führung: Modul 4",
+    "description": "Einführung in führung mit Schwerpunkt auf Motivation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Führung: Modul 5",
+    "description": "Einführung in führung mit Schwerpunkt auf Mitarbeitergespräch.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 66,
+    "title": "Führung: Modul 6",
+    "description": "Einführung in führung mit Schwerpunkt auf Delegation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 67,
+    "title": "Führung: Modul 7",
+    "description": "Einführung in führung mit Schwerpunkt auf Motivation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 68,
+    "title": "Führung: Modul 8",
+    "description": "Einführung in führung mit Schwerpunkt auf Mitarbeitergespräch.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 69,
+    "title": "Führung: Modul 9",
+    "description": "Einführung in führung mit Schwerpunkt auf Delegation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 70,
+    "title": "Führung: Modul 10",
+    "description": "Einführung in führung mit Schwerpunkt auf Motivation.",
+    "tags": [
+      "Führung",
+      "Motivation",
+      "Mitarbeitergespräch",
+      "Delegation"
+    ]
+  },
+  {
+    "id": 71,
+    "title": "Gesundheit: Modul 1",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Ergonomie.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 72,
+    "title": "Gesundheit: Modul 2",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Stress.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 73,
+    "title": "Gesundheit: Modul 3",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Bewegung.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 74,
+    "title": "Gesundheit: Modul 4",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Ergonomie.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 75,
+    "title": "Gesundheit: Modul 5",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Stress.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 76,
+    "title": "Gesundheit: Modul 6",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Bewegung.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 77,
+    "title": "Gesundheit: Modul 7",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Ergonomie.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 78,
+    "title": "Gesundheit: Modul 8",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Stress.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 79,
+    "title": "Gesundheit: Modul 9",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Bewegung.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 80,
+    "title": "Gesundheit: Modul 10",
+    "description": "Einführung in gesundheit mit Schwerpunkt auf Ergonomie.",
+    "tags": [
+      "Gesundheit",
+      "Ergonomie",
+      "Stress",
+      "Bewegung"
+    ]
+  },
+  {
+    "id": 81,
+    "title": "Büroorganisation: Modul 1",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Zeitmanagement.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 82,
+    "title": "Büroorganisation: Modul 2",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Dokumentation.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 83,
+    "title": "Büroorganisation: Modul 3",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Ablage.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 84,
+    "title": "Büroorganisation: Modul 4",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Zeitmanagement.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 85,
+    "title": "Büroorganisation: Modul 5",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Dokumentation.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 86,
+    "title": "Büroorganisation: Modul 6",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Ablage.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 87,
+    "title": "Büroorganisation: Modul 7",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Zeitmanagement.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 88,
+    "title": "Büroorganisation: Modul 8",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Dokumentation.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 89,
+    "title": "Büroorganisation: Modul 9",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Ablage.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 90,
+    "title": "Büroorganisation: Modul 10",
+    "description": "Einführung in büroorganisation mit Schwerpunkt auf Zeitmanagement.",
+    "tags": [
+      "Büroorganisation",
+      "Zeitmanagement",
+      "Dokumentation",
+      "Ablage"
+    ]
+  },
+  {
+    "id": 91,
+    "title": "Grundlagen der KFZ-Versicherung",
+    "description": "Einführung in kfz mit Schwerpunkt auf Auto.",
+    "tags": [
+      "KFZ",
+      "Auto",
+      "Kraftfahrzeug",
+      "Versicherung",
+      "Haftpflicht"
+    ]
+  },
+  {
+    "id": 92,
+    "title": "Autoversicherung im Überblick",
+    "description": "Einführung in kfz mit Schwerpunkt auf Kraftfahrzeug.",
+    "tags": [
+      "Auto",
+      "Versicherung",
+      "Teilkasko",
+      "Vollkasko"
+    ]
+  },
+  {
+    "id": 93,
+    "title": "Kraftfahrzeug-Versicherung kompakt",
+    "description": "Einführung in kfz mit Schwerpunkt auf Versicherung.",
+    "tags": [
+      "Kraftfahrzeug",
+      "Versicherung",
+      "KFZ"
+    ]
+  },
+  {
+    "id": 94,
+    "title": "Grundlagen der KFZ-Versicherung",
+    "description": "Einführung in kfz mit Schwerpunkt auf Auto.",
+    "tags": [
+      "KFZ",
+      "Auto",
+      "Kraftfahrzeug",
+      "Versicherung",
+      "Haftpflicht"
+    ]
+  },
+  {
+    "id": 95,
+    "title": "Autoversicherung im Überblick",
+    "description": "Einführung in kfz mit Schwerpunkt auf Kraftfahrzeug.",
+    "tags": [
+      "Auto",
+      "Versicherung",
+      "Teilkasko",
+      "Vollkasko"
+    ]
+  },
+  {
+    "id": 96,
+    "title": "Kraftfahrzeug-Versicherung kompakt",
+    "description": "Einführung in kfz mit Schwerpunkt auf Versicherung.",
+    "tags": [
+      "Kraftfahrzeug",
+      "Versicherung",
+      "KFZ"
+    ]
+  },
+  {
+    "id": 97,
+    "title": "Grundlagen der KFZ-Versicherung",
+    "description": "Einführung in kfz mit Schwerpunkt auf Auto.",
+    "tags": [
+      "KFZ",
+      "Auto",
+      "Kraftfahrzeug",
+      "Versicherung",
+      "Haftpflicht"
+    ]
+  },
+  {
+    "id": 98,
+    "title": "Autoversicherung im Überblick",
+    "description": "Einführung in kfz mit Schwerpunkt auf Kraftfahrzeug.",
+    "tags": [
+      "Auto",
+      "Versicherung",
+      "Teilkasko",
+      "Vollkasko"
+    ]
+  },
+  {
+    "id": 99,
+    "title": "Kraftfahrzeug-Versicherung kompakt",
+    "description": "Einführung in kfz mit Schwerpunkt auf Versicherung.",
+    "tags": [
+      "Kraftfahrzeug",
+      "Versicherung",
+      "KFZ"
+    ]
+  },
+  {
+    "id": 100,
+    "title": "Grundlagen der KFZ-Versicherung",
+    "description": "Einführung in kfz mit Schwerpunkt auf Auto.",
+    "tags": [
+      "KFZ",
+      "Auto",
+      "Kraftfahrzeug",
+      "Versicherung",
+      "Haftpflicht"
+    ]
+  }
+]

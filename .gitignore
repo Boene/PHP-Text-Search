@@ -1,0 +1,11 @@
+# IDE
+.vscode
+.idea/
+
+# Dependencies
+/vendor/
+
+# Environment
+.env
+
+
