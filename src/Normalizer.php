@@ -1,10 +1,9 @@
 <?php
 
-$filePath = __DIR__."/../content/content.json";
-$json_file = file_get_contents($filePath);
-$data = json_decode($json_file, true);
+$filePath_swords = __DIR__."/../content/stopwords.json";
+$json_file_swords = file_get_contents($filePath_swords);
+$swords = json_decode($json_file_swords, true);
 
-$text = "   a Warum liegtn hierß              überall . , ! rum, du #!?:,!# LALALALALA a   ";
 
 function normalize(string $text)
 {
@@ -21,12 +20,26 @@ function trimWhitespaces(string $text)
     return trim($text);
 }
 
-function Preprocess(string $text)
+function removeStopwords(string $text, array $swords)
+{
+    $words = explode(" ", $text);
+    $return_text = "";
+    foreach ($words as $word) {
+        if (in_array($word, $swords["stopwords"])) {
+
+        } else {
+            $return_text = $return_text . " " . $word;
+        }
+    }
+    return $return_text;
+}
+
+function Preprocess(string $text, array $swords)
 {
     $text = normalize($text);
     $text = removePunctuationWithSpaces($text);
     $text = trimWhitespaces($text);
+    $text = removeStopwords($text, $swords);
+    $text = trimWhitespaces($text);
     return $text;
 }
-
-echo Preprocess($text);
