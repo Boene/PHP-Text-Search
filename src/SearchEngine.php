@@ -1,5 +1,8 @@
 <?php
 
+///////////////////////////////////////////////////////////////
+//////////////// Access and format the content ////////////////
+
 function getDocumentById(int $id, array $documents): ?array
 {
     foreach ($documents as $document) {
@@ -11,7 +14,7 @@ function getDocumentById(int $id, array $documents): ?array
     return null;
 }
 
-function DocumentToString(array $document): string
+function documentToString(array $document): string
 {
     $title = $document["title"];
     $description = $document["description"];
@@ -21,4 +24,32 @@ function DocumentToString(array $document): string
     }
     $words = $title . " " . $description . " " . $tag_words;
     return $words;
+}
+
+////////////////////////////////////////////////////////////////////
+//////////////// Search for and present the results ////////////////
+
+function showResults(array|null $results)
+{
+    if (is_null($results)) {
+        echo("No result has been found.");
+        return;
+    }
+    $output = "Results have been found in module(s) ";
+    foreach ($results as $module) {
+        $output = $output . $module . ", ";
+    }
+    $output = rtrim($output, ', ');
+    echo($output);
+}
+
+function searchForWord(string $word, array $index): void
+{
+    $word = mb_strtolower($word);
+    if (array_key_exists($word, $index)) {
+        showResults($index[$word]);     //$index[$word];
+        return;
+    }
+    showResults(null);
+    return;
 }

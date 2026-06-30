@@ -1,0 +1,237 @@
+[
+  {
+    "id": 1,
+    "query": "versicherung",
+    "expected": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "comment": "Einfaches Schlüsselwort"
+  },
+  {
+    "id": 2,
+    "query": "auto",
+    "expected": [
+      91,
+      92,
+      94,
+      95,
+      97,
+      98,
+      100
+    ],
+    "comment": "Synonym-Vorbereitung"
+  },
+  {
+    "id": 3,
+    "query": "kfz",
+    "expected": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "comment": "Abkürzung"
+  },
+  {
+    "id": 4,
+    "query": "kraftfahrzeug",
+    "expected": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "comment": "Ausgeschrieben"
+  },
+  {
+    "id": 5,
+    "query": "datenschutz",
+    "expected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "comment": "Eindeutiger Begriff"
+  },
+  {
+    "id": 6,
+    "query": "firewall",
+    "expected": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "comment": "IT"
+  },
+  {
+    "id": 7,
+    "query": "feuerlöscher",
+    "expected": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "comment": "Brandschutz"
+  },
+  {
+    "id": 8,
+    "query": "ergonomie",
+    "expected": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "comment": "Gesundheit"
+  },
+  {
+    "id": 9,
+    "query": "zeitmanagement",
+    "expected": [
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90
+    ],
+    "comment": "Büro"
+  },
+  {
+    "id": 10,
+    "query": "autoversicherung",
+    "expected": [
+      92,
+      95,
+      98
+    ],
+    "comment": "Zusammengesetztes Wort"
+  },
+  {
+    "id": 11,
+    "query": "auto versicherung",
+    "expected": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "comment": "Mehrwortsuche"
+  },
+  {
+    "id": 12,
+    "query": "e-mail",
+    "expected": [
+      11,
+      13,
+      15,
+      17,
+      19
+    ],
+    "comment": "Normalisierung"
+  },
+  {
+    "id": 13,
+    "query": "email",
+    "expected": [
+      11,
+      13,
+      15,
+      17,
+      19
+    ],
+    "comment": "Alternative Schreibweise"
+  },
+  {
+    "id": 14,
+    "query": "psa",
+    "expected": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "comment": "Abkürzung"
+  },
+  {
+    "id": 15,
+    "query": "schutzkleidung",
+    "expected": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "comment": "Arbeitsschutz"
+  }
+]

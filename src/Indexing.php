@@ -4,10 +4,6 @@ require_once dirname(__FILE__) . '/Normalizer.php';
 require_once dirname(__FILE__) . '/SearchEngine.php';
 require_once dirname(__FILE__) . '/Tokenizer.php';
 
-$filePath_index = __DIR__."/../content/index.json";
-$json_file_index = file_get_contents($filePath_index);
-$index = json_decode($json_file_index, true);
-
 
 function addWord(string $word, int $ID, array &$index, string $filePath_index)
 {
@@ -34,6 +30,26 @@ function checkForWord(string $word, array $index, int $ID = -1): bool
     }
 }
 
+function createIndex(array $data, array $index, array $swords, string $filePath_index)
+{
+    $a = true;
+    $i = 1;
 
-// addWord("Salat", 12, $index, $filePath_index);
-// addID("Salat", 5, $index, $filePath_index);
+    while ($a == true) {
+        $doc = getDocumentById($i, $data);
+        $doc_string = documentToString($doc);
+        $preprocessed_data = Preprocess($doc_string, $swords);
+        $tokens = Tokenize($preprocessed_data);
+        foreach ($tokens as $word) {
+            if (checkForWord($word, $index) == true) {
+                addID($word, $i, $index, $filePath_index);
+            } else {
+                addWord($word, $i, $index, $filePath_index);
+            }
+        }
+        if (getDocumentById($i + 1, $data) == null) {
+            $a = false;
+        }
+        $i += 1;
+    }
+}
