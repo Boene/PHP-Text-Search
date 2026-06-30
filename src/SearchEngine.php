@@ -43,13 +43,20 @@ function showResults(array|null $results)
     echo($output);
 }
 
-function searchForWord(string $word, array $index): void
+function searchForWord(string $word, array $index, bool $test = false)
 {
     $word = mb_strtolower($word);
-    if (array_key_exists($word, $index)) {
-        showResults($index[$word]);     //$index[$word];
+    if ($test == true) {
+        if (array_key_exists($word, $index)) {
+            return ($index[$word]);
+        }
+        return [];
+    } else {
+        if (array_key_exists($word, $index)) {
+            showResults($index[$word]);
+            return;
+        }
+        showResults(null);
         return;
     }
-    showResults(null);
-    return;
 }
