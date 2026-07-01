@@ -1,6 +1,55 @@
 <?php
 
-///////////////////////////////////////////////////////////////
+class SearchEngine
+{
+    /// ### Public Properties ### ///
+
+    public bool $test;
+
+    /// ### Private Properties ### ///
+
+    private array $index;
+
+    /// ### Constructor ### ///
+
+    public function __construct(array $index, bool $test = false)
+    {
+        $this->index = $index;
+        $this->test = $test;
+    }
+
+    /// ### Public Functions ### ///
+
+    public function getDocumentByID(int $id, array $documents): ?array
+    {
+        foreach ($documents as $document) {
+            if ($document["id"] == $id) {
+                return $document;
+            }
+        }
+
+        return null;
+    }
+
+    public function documentToString(array $document): string
+    {
+        $title = $document["title"];
+        $description = $document["description"];
+        $tag_words = "";
+        foreach ($document["tags"] as $tag) {
+            $tag_words = $tag_words . " " . $tag;
+        }
+        $words = $title . " " . $description . " " . $tag_words;
+        return $words;
+    }
+
+    /// ### Private Functions ### ///
+
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
 //////////////// Access and format the content ////////////////
 
 function getDocumentById(int $id, array $documents): ?array

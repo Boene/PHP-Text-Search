@@ -32,6 +32,11 @@ function getQueryByID(int $id, array $queries)
     return null;
 }
 
+function totalResult()
+{
+
+}
+
 function showTestResults(int $id, string $word, array $matches, array $misses, array $unexpected, int $count_expected, string $comment)
 {
     $count_matches = count($matches);
@@ -52,17 +57,23 @@ function showTestResults(int $id, string $word, array $matches, array $misses, a
     echo("Matches: $match_string\n");
     echo("Matched $count_matches / $count_expected ($match_percent %) correctly.\n");
     echo("Misses: $miss_string\n");
-    echo("Unexpected matches: $unexpected_string\n\n");
+    echo("Unexpected matches: $unexpected_string\n");
 }
 
 function runQuery(int $count, array $queries, array $index, int $start = 1)
 {
+    $match_rate_list = [];
     for ($i = $start; $i <= $count; $i += 1) {
         $query_data = getQueryByID($i, $queries);
         $search_result = searchForWord($query_data["query"], $index, $test = true);
         $matches = array_intersect($query_data["expected"], $search_result);
         $misses = array_diff($query_data["expected"], $search_result);
         $unexpected = array_diff($search_result, $query_data["expected"]);
+        array_push($match_rate_list, count($matches) / count($query_data["expected"]));
         showTestResults($i, $query_data["query"], $matches, $misses, $unexpected, count($query_data["expected"]), $query_data["comment"]);
     }
+    $tot_match_rate = array_sum($match_rate_list) / count($match_rate_list) * 100;
+    echo("\n####################################\n");
+    echo("Total match rate: $tot_match_rate %\n");
+    echo("####################################");
 }

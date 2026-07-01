@@ -16,13 +16,18 @@ $index = json_decode($json_file_index, true);
 
 $filePath_swords = __DIR__."/content/stopwords.json";
 $json_file_swords = file_get_contents($filePath_swords);
-$swords = json_decode($json_file_swords, true);
+$stopwords = json_decode($json_file_swords, true);
 
 $filePath_query = __DIR__."/tests/queries_v2.json";
 $json_file_query = file_get_contents($filePath_query);
 $queries = json_decode($json_file_query, true);
 
 
-// print_r(searchForWord("wurst", $index, $test = true));
 
-runQuery(count($queries), $queries, $index, );
+// runQuery(count($queries), $queries, $index);
+
+$Tokenizer = new Tokenizer();
+$Preprocessor = new Preprocessor($stopwords, $replace_numbers = true);
+$SearchEngine = new SearchEngine($index);
+$Indexer = new Indexer($Tokenizer, $Preprocessor, $SearchEngine, $index, $data, $filePath_index);
+$Indexer->createIndex();

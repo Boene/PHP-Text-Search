@@ -1,6 +1,78 @@
 <?php
 
-function normalize(string $text)
+class Preprocessor
+{
+    /// ### Public Properties ### ///
+
+    public bool $replace_numbers;
+
+    /// ### Private Properties ### ///
+
+    private array $Stopwords;
+
+    /// ### Constructor ### ///
+
+    public function __construct(array $Stopwords, bool $replace_numbers = false)
+    {
+        $this->replace_numbers = $replace_numbers;
+        $this->Stopwords = $Stopwords;
+    }
+
+    /// ### Public Functions ### ///
+
+    public function preprocess(string $text): string
+    {
+        $text = $this->normalize($text);
+        $text = $this->removePunctuation($text);
+        $text = $this->trimWhitspaces($text);
+        $text = $this->removeStopwords($text);
+        $text = $this->trimWhitspaces($text);
+
+        return $text;
+    }
+
+    /// ### Private Functions ### ///
+
+    private function normalize(string $text): string
+    {
+        return mb_strtolower($text);
+    }
+
+    private function removePunctuation(string $text): string
+    {
+        if ($this->replace_numbers) {
+            $text = preg_replace("/[^a-zßäöü]+/i", " ", $text);
+        } else {
+            $text = preg_replace("/[^a-z0-9ßäöü]+/i", " ", $text);
+        }
+        return $text;
+    }
+
+    private function trimWhitspaces(string $text): string
+    {
+        return trim($text);
+    }
+
+    private function removeStopwords(string $text): string
+    {
+        $words = explode(" ", $text);
+        $return_text = [];
+        foreach ($words as $word) {
+            if ((in_array($word, $this->Stopwords["stopwords"])) || (in_array($word, $this->Stopwords["context_words"]))) {
+                continue;
+            }
+            $return_text[] = $word;
+
+        }
+        return implode(" ", $return_text);
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+
+function normalize(string $text): string
 {
     return mb_strtolower($text);
 }
