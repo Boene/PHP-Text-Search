@@ -19,7 +19,85 @@ $swords = json_decode($json_file_swords, true);
 
 $filePath_query = __DIR__."/../tests/queries_v2.json";
 $json_file_query = file_get_contents($filePath_query);
-$queries = json_decode($json_file_query, true);
+$queries = json_decode($json_file_query);
+
+class TestEngine
+{
+    /// ### Public Properties ### ///
+
+    private SearchEngine $search_engine;
+    private array $queries;
+    private array $index;
+
+    /// ### Constructor ### ///
+
+    public function __construct(SearchEngine $search_engine, array $queries, array $index)
+    {
+        $this->search_engine = $search_engine;
+        $this->queries = $queries;
+        $this->index = $index;
+    }
+
+    /// ### Public Functions ### ///
+
+    public function runQuery(int $count, int $start = 1)
+    {
+        $match_rate_list = [];
+        for ($i = $start; $i <= $count; $i += 1) {
+            $query_data = $this->getQueryByID($i);
+            $search_result = $this->search_engine->searchForWord($query_data["query"]);
+            $matches = array_intersect($query_data["expected"], $search_result);
+            $misses = array_diff($query_data["expected"], $search_result);
+            $unexpected = array_diff($search_result, $query_data["expected"]);
+            array_push($match_rate_list, count($matches) / count($query_data["expected"]));
+            showTestResults($i, $query_data["query"], $matches, $misses, $unexpected, count($query_data["expected"]), $query_data["comment"]);
+        }
+        $tot_match_rate = array_sum($match_rate_list) / count($match_rate_list) * 100;
+        echo("\n####################################\n");
+        echo("Total match rate: $tot_match_rate %\n");
+        echo("####################################");
+    }
+
+
+    /// ### Private Functions ### ///
+
+    private function getQueryByID(int $id)
+    {
+        foreach ($this->queries as $query) {
+            if ($query["id"] == $id) {
+                return $query;
+            }
+        }
+
+        return null;
+    }
+
+    private function showTestResults(int $id, string $word, array $matches, array $misses, array $unexpected, int $count_expected, string $comment)
+    {
+        $count_matches = count($matches);
+        $match_percent = 100 * $count_matches / $count_expected;
+        $match_string = "";
+        $miss_string = "";
+        $unexpected_string = "";
+        foreach ($matches as $match) {
+            $match_string = $match_string . $match . " ";
+        }
+        foreach ($misses as $miss) {
+            $miss_string = $miss_string . $miss . " ";
+        }
+        foreach ($unexpected as $whoah) {
+            $unexpected_string = $unexpected_string . $whoah . " ";
+        }
+        echo("Test results for Query-ID $id with test word '$word':\n");
+        echo("Matches: $match_string\n");
+        echo("Matched $count_matches / $count_expected ($match_percent %) correctly.\n");
+        echo("Misses: $miss_string\n");
+        echo("Unexpected matches: $unexpected_string\n");
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 function getQueryByID(int $id, array $queries)
 {
@@ -30,11 +108,6 @@ function getQueryByID(int $id, array $queries)
     }
 
     return null;
-}
-
-function totalResult()
-{
-
 }
 
 function showTestResults(int $id, string $word, array $matches, array $misses, array $unexpected, int $count_expected, string $comment)

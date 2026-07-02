@@ -31,6 +31,25 @@ class SearchEngine
         return null;
     }
 
+    public function searchForWord(string $word)
+    {
+        $word = mb_strtolower($word);
+        $word = trim($word);
+        if ($this->test == true) {
+            if (array_key_exists($word, $this->index)) {
+                return ($this->index[$word]);
+            }
+            return [];
+        } else {
+            if (array_key_exists($word, $this->index)) {
+                $this->showResults($this->index[$word]);
+                return;
+            }
+            $this->showResults(null);
+            return;
+        }
+    }
+
     public function documentToString(array $document): string
     {
         $title = $document["title"];
@@ -45,6 +64,19 @@ class SearchEngine
 
     /// ### Private Functions ### ///
 
+    private function showResults(array|null $results)
+    {
+        if (is_null($results)) {
+            echo("No result has been found.");
+            return;
+        }
+        $output = "Results have been found in module(s) ";
+        foreach ($results as $module) {
+            $output = $output . $module . ", ";
+        }
+        $output = rtrim($output, ', ');
+        echo($output);
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////

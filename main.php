@@ -24,10 +24,9 @@ $queries = json_decode($json_file_query, true);
 
 
 
-// runQuery(count($queries), $queries, $index);
 
 $Tokenizer = new Tokenizer();
 $Preprocessor = new Preprocessor($stopwords, $replace_numbers = true);
-$SearchEngine = new SearchEngine($index);
+$SearchEngine = new SearchEngine($index, $test = true);
+$TestEngine = new TestEngine($SearchEngine, $queries, $index);
 $Indexer = new Indexer($Tokenizer, $Preprocessor, $SearchEngine, $index, $data, $filePath_index);
-$Indexer->createIndex();
