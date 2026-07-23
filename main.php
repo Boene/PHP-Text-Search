@@ -1,10 +1,11 @@
 <?php
 
-require_once dirname(__FILE__) . '/src/Normalizer.php';
-require_once dirname(__FILE__) . '/src/SearchEngine.php';
-require_once dirname(__FILE__) . '/src/Tokenizer.php';
-require_once dirname(__FILE__) . '/src/Indexing.php';
-require_once dirname(__FILE__) . '/src/TestEngine.php';
+require_once dirname(__FILE__) . '/src/Processing/Normalizer.php';
+require_once dirname(__FILE__) . '/src/Processing/Tokenizer.php';
+require_once dirname(__FILE__) . '/src/Processing/StopwordFilter.php';
+require_once dirname(__FILE__) . '/src/Search/SearchEngine.php';
+require_once dirname(__FILE__) . '/src/Search/Indexing.php';
+require_once dirname(__FILE__) . '/src/Test/TestEngine.php';
 
 $filePath_content = __DIR__."/content/content.json";
 $json_file = file_get_contents($filePath_content);
@@ -26,7 +27,10 @@ $queries = json_decode($json_file_query, true);
 
 
 $Tokenizer = new Tokenizer();
-$Preprocessor = new Preprocessor($stopwords, $replace_numbers = true);
+$Normalizer = new Normalizer($replace_numbers = true);
+$StopwordFilter = new StopwordFilter($stopwords);
 $SearchEngine = new SearchEngine($index, $test = true);
 $TestEngine = new TestEngine($SearchEngine, $queries, $index);
-$Indexer = new Indexer($Tokenizer, $Preprocessor, $SearchEngine, $index, $data, $filePath_index);
+$Indexer = new Indexer($Tokenizer, $Normalizer, $SearchEngine, $index, $data, $filePath_index);
+
+$TestEngine->runQuery(10);

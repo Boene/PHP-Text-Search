@@ -1,8 +1,8 @@
 <?php
 
-require_once dirname(__FILE__) . '/Normalizer.php';
+require_once dirname(__FILE__) . '/../Processing/Normalizer.php';
+require_once dirname(__FILE__) . '/../Processing/Tokenizer.php';
 require_once dirname(__FILE__) . '/SearchEngine.php';
-require_once dirname(__FILE__) . '/Tokenizer.php';
 
 class Indexer
 {
@@ -11,7 +11,7 @@ class Indexer
     /// ### Private Properties ### ///
 
     private Tokenizer $tokenizer;
-    private Preprocessor $preprocessor;
+    private Normalizer $normalizer;
     private SearchEngine $search_engine;
     private array $index;
     private array $data;
@@ -21,14 +21,14 @@ class Indexer
 
     public function __construct(
         Tokenizer $tokenizer,
-        Preprocessor $preprocessor,
+        Normalizer $normalizer,
         SearchEngine $search_engine,
         array $index,
         array $data,
         string $filePath_index
     ) {
         $this->tokenizer = $tokenizer;
-        $this->preprocessor = $preprocessor;
+        $this->normalizer = $normalizer;
         $this->search_engine = $search_engine;
         $this->index = $index;
         $this->data = $data;
@@ -45,7 +45,7 @@ class Indexer
         while ($a == true) {
             $doc = $this->search_engine->getDocumentById($i, $this->data);
             $doc_string = $this->search_engine->documentToString($doc);
-            $preprocessed_data = $this->preprocessor->preprocess($doc_string);
+            $preprocessed_data = $this->normalizer->preprocess($doc_string);
             $tokens = $this->tokenizer->tokenize($preprocessed_data);
             foreach ($tokens as $word) {
                 if ($this->checkForWord($word) == true) {

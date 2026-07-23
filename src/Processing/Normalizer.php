@@ -1,6 +1,6 @@
 <?php
 
-class Preprocessor
+class Normalizer
 {
     /// ### Public Properties ### ///
 
@@ -8,14 +8,11 @@ class Preprocessor
 
     /// ### Private Properties ### ///
 
-    private array $Stopwords;
-
     /// ### Constructor ### ///
 
-    public function __construct(array $Stopwords, bool $replace_numbers = false)
+    public function __construct(bool $replace_numbers)
     {
         $this->replace_numbers = $replace_numbers;
-        $this->Stopwords = $Stopwords;
     }
 
     /// ### Public Functions ### ///
@@ -24,8 +21,6 @@ class Preprocessor
     {
         $text = $this->normalize($text);
         $text = $this->removePunctuation($text);
-        $text = $this->trimWhitspaces($text);
-        $text = $this->removeStopwords($text);
         $text = $this->trimWhitspaces($text);
 
         return $text;
@@ -51,20 +46,6 @@ class Preprocessor
     private function trimWhitspaces(string $text): string
     {
         return trim($text);
-    }
-
-    private function removeStopwords(string $text): string
-    {
-        $words = explode(" ", $text);
-        $return_text = [];
-        foreach ($words as $word) {
-            if ((in_array($word, $this->Stopwords["stopwords"])) || (in_array($word, $this->Stopwords["context_words"]))) {
-                continue;
-            }
-            $return_text[] = $word;
-
-        }
-        return implode(" ", $return_text);
     }
 }
 
