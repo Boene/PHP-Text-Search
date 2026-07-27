@@ -1,6 +1,6 @@
 <?php
 
-class Pipeline
+class TokenPipeline
 {
     /// ### Public Properties ### ///
 
@@ -10,9 +10,14 @@ class Pipeline
 
     /// ### Constructor ### ///
 
+    public function __construct(array $processors)
+    {
+        $this->processors = $processors;
+    }
+
     /// ### Public Functions ### ///
 
-    public function add($processor)
+    public function add(Tokenprocessor $processor)
     {
         $this->processors[] = $processor;
     }
@@ -20,7 +25,7 @@ class Pipeline
     public function run(array $tokens): array
     {
         foreach ($this->processors as $processor) {
-            $tokens = $processor->process($tokens);
+            $tokens = $processor->token_process($tokens);
         }
 
         return $tokens;

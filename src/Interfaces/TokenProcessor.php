@@ -2,5 +2,5 @@
 
 interface TokenProcessor
 {
-    public function process(array $tokens): array;
+    public function token_process(array $tokens): array;
 }

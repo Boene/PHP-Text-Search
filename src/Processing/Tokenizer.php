@@ -13,7 +13,7 @@ class Tokenizer
 
     /// ### Public Functions ### ///
 
-    public function tokenize(string $input): array
+    public function preprocess(string $input): array
     {
         $words = explode(" ", $input);
         return $words;

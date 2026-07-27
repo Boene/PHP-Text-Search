@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__FILE__) . '/src/Interfaces/TokenProcessor.php';
+require_once dirname(__FILE__) . '/src/Pipelines/TokenPipeline.php';
 require_once dirname(__FILE__) . '/src/Processing/Normalizer.php';
 require_once dirname(__FILE__) . '/src/Processing/Tokenizer.php';
 require_once dirname(__FILE__) . '/src/Processing/StopwordFilter.php';
@@ -23,14 +25,37 @@ $filePath_query = __DIR__."/tests/queries_v2.json";
 $json_file_query = file_get_contents($filePath_query);
 $queries = json_decode($json_file_query, true);
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+$tokenProcessor_config =        /// Configuration of Indexing methods.
+[
+    "stopwords" => true,
+    "stemming" => false
+];
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $Tokenizer = new Tokenizer();
 $Normalizer = new Normalizer($replace_numbers = true);
-$StopwordFilter = new StopwordFilter($stopwords);
+/// $StopwordFilter = new StopwordFilter($stopwords);
 $SearchEngine = new SearchEngine($index, $test = true);
 $TestEngine = new TestEngine($SearchEngine, $queries, $index);
-$Indexer = new Indexer($Tokenizer, $Normalizer, $SearchEngine, $index, $data, $filePath_index);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$token_processors = [];         /// Only creates Objects when they are needed, according to $tokenProcessor_config.
+if ($tokenProcessor_config["stopwords"]) {
+    $token_processors[] = new StopwordFilter($stopwords);
+}
+if ($tokenProcessor_config["stemming"]) {
+
+}
+
+$token_Pipeline = new TokenPipeline($token_processors);         /// This Pipeline is given to the Indexer with all the Objects representing the wanted methods.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$Indexer = new Indexer($Tokenizer, $Normalizer, $SearchEngine, $token_Pipeline, $index, $data, $filePath_index);
 
 $TestEngine->runQuery(10);
+/// $Indexer->createIndex();

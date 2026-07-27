@@ -13,6 +13,7 @@ class Indexer
     private Tokenizer $tokenizer;
     private Normalizer $normalizer;
     private SearchEngine $search_engine;
+    private TokenPipeline $pipeline;
     private array $index;
     private array $data;
     private string $filePath_index;
@@ -23,6 +24,7 @@ class Indexer
         Tokenizer $tokenizer,
         Normalizer $normalizer,
         SearchEngine $search_engine,
+        TokenPipeline $pipeline,
         array $index,
         array $data,
         string $filePath_index
@@ -30,6 +32,7 @@ class Indexer
         $this->tokenizer = $tokenizer;
         $this->normalizer = $normalizer;
         $this->search_engine = $search_engine;
+        $this->pipeline = $pipeline;
         $this->index = $index;
         $this->data = $data;
         $this->filePath_index = $filePath_index;
@@ -43,10 +46,11 @@ class Indexer
         $i = 1;
 
         while ($a == true) {
-            $doc = $this->search_engine->getDocumentById($i, $this->data);
+            $doc = $this->search_engine->getDocumentByID($i, $this->data);
             $doc_string = $this->search_engine->documentToString($doc);
             $preprocessed_data = $this->normalizer->preprocess($doc_string);
-            $tokens = $this->tokenizer->tokenize($preprocessed_data);
+            $tokens = $this->tokenizer->preprocess($preprocessed_data);
+            $tokens = $this->pipeline->run($tokens);
             foreach ($tokens as $word) {
                 if ($this->checkForWord($word) == true) {
                     $this->addID($word, $i);

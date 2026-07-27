@@ -1,6 +1,6 @@
 <?php
 
-class StopwordFilter
+class StopwordFilter implements TokenProcessor
 {
     /// ### Public Properties ### ///
 
@@ -17,7 +17,7 @@ class StopwordFilter
 
     /// ### Public Functions ### ///
 
-    public function process(array $tokens): array
+    public function token_process(array $tokens): array
     {
         $return_text = [];
         foreach ($tokens as $token) {
