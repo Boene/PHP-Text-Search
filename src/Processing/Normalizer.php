@@ -30,6 +30,7 @@ class Normalizer
 
     private function normalize(string $text): string
     {
+        $text = str_replace(["ß", "ä", "ö", "ü"], ["ss", "ae", "oe", "ue"], $text);
         return mb_strtolower($text);
     }
 
