@@ -14,3 +14,10 @@
 
 # pictures
 /Modulstruktur.jpg
+
+# OpenThesaurus Database
+src/OpenThes/dummy.json
+src/OpenThes/openthesaurus.sql
+src/OpenThes/openthesaurus_onlyWords.txt
+src/OpenThes/openthesaurus.txt
+src/OpenThes/openthesaurus_dump.sql
