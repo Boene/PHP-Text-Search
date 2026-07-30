@@ -17,13 +17,17 @@ $filePath_index = __DIR__."/content/index.json";
 $json_file_index = file_get_contents($filePath_index);
 $index = json_decode($json_file_index, true);
 
+$filePath_query = __DIR__."/tests/queries_v2.json";
+$json_file_query = file_get_contents($filePath_query);
+$queries = json_decode($json_file_query, true);
+
 $filePath_swords = __DIR__."/content/stopwords.json";
 $json_file_swords = file_get_contents($filePath_swords);
 $stopwords = json_decode($json_file_swords, true);
 
-$filePath_query = __DIR__."/tests/queries_v2.json";
+$filePath_query = __DIR__."/src/OpenThes/synonyms.json";
 $json_file_query = file_get_contents($filePath_query);
-$queries = json_decode($json_file_query, true);
+$synonyms = json_decode($json_file_query, true);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -38,7 +42,7 @@ $tokenProcessor_config =        /// Configuration of Indexing methods.
 $Tokenizer = new Tokenizer();
 $Normalizer = new Normalizer($replace_numbers = true);
 /// $StopwordFilter = new StopwordFilter($stopwords);
-$SearchEngine = new SearchEngine($index, $test = true);
+$SearchEngine = new SearchEngine($index, $synonyms, $test = true);
 $TestEngine = new TestEngine($SearchEngine, $queries, $index);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
