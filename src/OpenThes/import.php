@@ -27,9 +27,14 @@ WHERE
                 6, 7, 9, 10, 12, 13, 18, 19,
                 21, 24, 25, 32, 39, 44,
                 53, 58, 101, 120, 122,
-                129, 231
+                129, 231, 357
             )
     )
+    AND t.word NOT LIKE '\"%' 
+    AND t.word NOT LIKE '\'' 
+    AND t.word NOT LIKE '! %'
+    AND t.word NOT LIKE '(%'
+    AND t.word NOT LIKE '.%'
 ORDER BY t.synset_id;
 ";
 
@@ -65,4 +70,4 @@ foreach ($groups as $syn) {
 
 ksort($lookup);
 $json = json_encode($lookup, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-file_put_contents("synonyme.json", $json);
+file_put_contents("synonyms.json", $json);
