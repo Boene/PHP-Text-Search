@@ -1,0 +1,1768 @@
+[
+    {
+        "test_id": 1,
+        "query": "Datenschutz",
+        "results": [
+            {
+                "id": 17,
+                "relevance": 5
+            },
+            {
+                "id": 43,
+                "relevance": 5
+            },
+            {
+                "id": 64,
+                "relevance": 5
+            },
+            {
+                "id": 65,
+                "relevance": 5
+            },
+            {
+                "id": 69,
+                "relevance": 5
+            },
+            {
+                "id": 103,
+                "relevance": 5
+            },
+            {
+                "id": 112,
+                "relevance": 5
+            },
+            {
+                "id": 119,
+                "relevance": 5
+            },
+            {
+                "id": 139,
+                "relevance": 5
+            },
+            {
+                "id": 227,
+                "relevance": 5
+            },
+            {
+                "id": 261,
+                "relevance": 5
+            },
+            {
+                "id": 327,
+                "relevance": 5
+            },
+            {
+                "id": 350,
+                "relevance": 5
+            },
+            {
+                "id": 367,
+                "relevance": 5
+            },
+            {
+                "id": 433,
+                "relevance": 5
+            },
+            {
+                "id": 439,
+                "relevance": 5
+            },
+            {
+                "id": 447,
+                "relevance": 5
+            },
+            {
+                "id": 452,
+                "relevance": 5
+            },
+            {
+                "id": 475,
+                "relevance": 5
+            },
+            {
+                "id": 540,
+                "relevance": 5
+            },
+            {
+                "id": 570,
+                "relevance": 5
+            },
+            {
+                "id": 590,
+                "relevance": 5
+            },
+            {
+                "id": 612,
+                "relevance": 5
+            },
+            {
+                "id": 628,
+                "relevance": 5
+            },
+            {
+                "id": 645,
+                "relevance": 5
+            },
+            {
+                "id": 658,
+                "relevance": 5
+            },
+            {
+                "id": 737,
+                "relevance": 5
+            },
+            {
+                "id": 800,
+                "relevance": 5
+            },
+            {
+                "id": 806,
+                "relevance": 5
+            },
+            {
+                "id": 864,
+                "relevance": 5
+            },
+            {
+                "id": 924,
+                "relevance": 5
+            },
+            {
+                "id": 930,
+                "relevance": 5
+            },
+            {
+                "id": 949,
+                "relevance": 5
+            },
+            {
+                "id": 963,
+                "relevance": 5
+            },
+            {
+                "id": 972,
+                "relevance": 5
+            },
+            {
+                "id": 976,
+                "relevance": 5
+            },
+            {
+                "id": 993,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "exact",
+            "title",
+            "fulltext",
+            "tags"
+        ],
+        "comment": "Basistest für exakte Treffer. Alle Datenschutz-Kurse sollen gefunden und hoch gerankt werden."
+    },
+    {
+        "test_id": 2,
+        "query": "DSGVO",
+        "results": [
+            {
+                "id": 20,
+                "relevance": 5
+            },
+            {
+                "id": 24,
+                "relevance": 5
+            },
+            {
+                "id": 33,
+                "relevance": 5
+            },
+            {
+                "id": 55,
+                "relevance": 5
+            },
+            {
+                "id": 83,
+                "relevance": 5
+            },
+            {
+                "id": 89,
+                "relevance": 5
+            },
+            {
+                "id": 93,
+                "relevance": 5
+            },
+            {
+                "id": 97,
+                "relevance": 5
+            },
+            {
+                "id": 123,
+                "relevance": 5
+            },
+            {
+                "id": 129,
+                "relevance": 5
+            },
+            {
+                "id": 130,
+                "relevance": 5
+            },
+            {
+                "id": 156,
+                "relevance": 5
+            },
+            {
+                "id": 172,
+                "relevance": 5
+            },
+            {
+                "id": 185,
+                "relevance": 5
+            },
+            {
+                "id": 191,
+                "relevance": 5
+            },
+            {
+                "id": 238,
+                "relevance": 5
+            },
+            {
+                "id": 258,
+                "relevance": 5
+            },
+            {
+                "id": 281,
+                "relevance": 5
+            },
+            {
+                "id": 292,
+                "relevance": 5
+            },
+            {
+                "id": 299,
+                "relevance": 5
+            },
+            {
+                "id": 306,
+                "relevance": 5
+            },
+            {
+                "id": 310,
+                "relevance": 5
+            },
+            {
+                "id": 337,
+                "relevance": 5
+            },
+            {
+                "id": 340,
+                "relevance": 5
+            },
+            {
+                "id": 347,
+                "relevance": 5
+            },
+            {
+                "id": 370,
+                "relevance": 5
+            },
+            {
+                "id": 383,
+                "relevance": 5
+            },
+            {
+                "id": 443,
+                "relevance": 5
+            },
+            {
+                "id": 486,
+                "relevance": 5
+            },
+            {
+                "id": 549,
+                "relevance": 5
+            },
+            {
+                "id": 554,
+                "relevance": 5
+            },
+            {
+                "id": 614,
+                "relevance": 5
+            },
+            {
+                "id": 616,
+                "relevance": 5
+            },
+            {
+                "id": 630,
+                "relevance": 5
+            },
+            {
+                "id": 661,
+                "relevance": 5
+            },
+            {
+                "id": 681,
+                "relevance": 5
+            },
+            {
+                "id": 691,
+                "relevance": 5
+            },
+            {
+                "id": 747,
+                "relevance": 5
+            },
+            {
+                "id": 761,
+                "relevance": 5
+            },
+            {
+                "id": 763,
+                "relevance": 5
+            },
+            {
+                "id": 766,
+                "relevance": 5
+            },
+            {
+                "id": 776,
+                "relevance": 5
+            },
+            {
+                "id": 781,
+                "relevance": 5
+            },
+            {
+                "id": 789,
+                "relevance": 5
+            },
+            {
+                "id": 822,
+                "relevance": 5
+            },
+            {
+                "id": 831,
+                "relevance": 5
+            },
+            {
+                "id": 838,
+                "relevance": 5
+            },
+            {
+                "id": 847,
+                "relevance": 5
+            },
+            {
+                "id": 863,
+                "relevance": 5
+            },
+            {
+                "id": 870,
+                "relevance": 5
+            },
+            {
+                "id": 892,
+                "relevance": 5
+            },
+            {
+                "id": 906,
+                "relevance": 5
+            },
+            {
+                "id": 910,
+                "relevance": 5
+            },
+            {
+                "id": 921,
+                "relevance": 5
+            },
+            {
+                "id": 932,
+                "relevance": 5
+            },
+            {
+                "id": 944,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "exact",
+            "title",
+            "fulltext",
+            "tags"
+        ],
+        "comment": "Eigenständiges Thema. Später kann geprüft werden, ob Synonyme zu Datenschutz berücksichtigt werden sollen."
+    },
+    {
+        "test_id": 3,
+        "query": "Versicherung",
+        "results": [
+            {
+                "id": 1,
+                "relevance": 5
+            },
+            {
+                "id": 6,
+                "relevance": 5
+            },
+            {
+                "id": 16,
+                "relevance": 5
+            },
+            {
+                "id": 74,
+                "relevance": 5
+            },
+            {
+                "id": 152,
+                "relevance": 5
+            },
+            {
+                "id": 153,
+                "relevance": 5
+            },
+            {
+                "id": 177,
+                "relevance": 5
+            },
+            {
+                "id": 187,
+                "relevance": 5
+            },
+            {
+                "id": 264,
+                "relevance": 5
+            },
+            {
+                "id": 265,
+                "relevance": 5
+            },
+            {
+                "id": 315,
+                "relevance": 5
+            },
+            {
+                "id": 316,
+                "relevance": 5
+            },
+            {
+                "id": 319,
+                "relevance": 5
+            },
+            {
+                "id": 335,
+                "relevance": 5
+            },
+            {
+                "id": 365,
+                "relevance": 5
+            },
+            {
+                "id": 368,
+                "relevance": 5
+            },
+            {
+                "id": 377,
+                "relevance": 5
+            },
+            {
+                "id": 398,
+                "relevance": 5
+            },
+            {
+                "id": 401,
+                "relevance": 5
+            },
+            {
+                "id": 427,
+                "relevance": 5
+            },
+            {
+                "id": 445,
+                "relevance": 5
+            },
+            {
+                "id": 513,
+                "relevance": 5
+            },
+            {
+                "id": 515,
+                "relevance": 5
+            },
+            {
+                "id": 533,
+                "relevance": 5
+            },
+            {
+                "id": 547,
+                "relevance": 5
+            },
+            {
+                "id": 600,
+                "relevance": 5
+            },
+            {
+                "id": 604,
+                "relevance": 5
+            },
+            {
+                "id": 624,
+                "relevance": 5
+            },
+            {
+                "id": 642,
+                "relevance": 5
+            },
+            {
+                "id": 651,
+                "relevance": 5
+            },
+            {
+                "id": 752,
+                "relevance": 5
+            },
+            {
+                "id": 787,
+                "relevance": 5
+            },
+            {
+                "id": 803,
+                "relevance": 5
+            },
+            {
+                "id": 841,
+                "relevance": 5
+            },
+            {
+                "id": 848,
+                "relevance": 5
+            },
+            {
+                "id": 861,
+                "relevance": 5
+            },
+            {
+                "id": 904,
+                "relevance": 5
+            },
+            {
+                "id": 919,
+                "relevance": 5
+            },
+            {
+                "id": 947,
+                "relevance": 5
+            },
+            {
+                "id": 978,
+                "relevance": 5
+            },
+            {
+                "id": 984,
+                "relevance": 5
+            },
+            {
+                "id": 994,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "stemming",
+            "synonym"
+        ],
+        "comment": "Soll Versicherungsgrundlagen zuverlässig finden."
+    },
+    {
+        "test_id": 4,
+        "query": "Schaden",
+        "results": [
+            {
+                "id": 2,
+                "relevance": 5
+            },
+            {
+                "id": 8,
+                "relevance": 5
+            },
+            {
+                "id": 35,
+                "relevance": 5
+            },
+            {
+                "id": 40,
+                "relevance": 5
+            },
+            {
+                "id": 44,
+                "relevance": 5
+            },
+            {
+                "id": 50,
+                "relevance": 5
+            },
+            {
+                "id": 68,
+                "relevance": 5
+            },
+            {
+                "id": 90,
+                "relevance": 5
+            },
+            {
+                "id": 136,
+                "relevance": 5
+            },
+            {
+                "id": 233,
+                "relevance": 5
+            },
+            {
+                "id": 366,
+                "relevance": 5
+            },
+            {
+                "id": 374,
+                "relevance": 5
+            },
+            {
+                "id": 384,
+                "relevance": 5
+            },
+            {
+                "id": 393,
+                "relevance": 5
+            },
+            {
+                "id": 407,
+                "relevance": 5
+            },
+            {
+                "id": 416,
+                "relevance": 5
+            },
+            {
+                "id": 436,
+                "relevance": 5
+            },
+            {
+                "id": 446,
+                "relevance": 5
+            },
+            {
+                "id": 488,
+                "relevance": 5
+            },
+            {
+                "id": 492,
+                "relevance": 5
+            },
+            {
+                "id": 493,
+                "relevance": 5
+            },
+            {
+                "id": 566,
+                "relevance": 5
+            },
+            {
+                "id": 595,
+                "relevance": 5
+            },
+            {
+                "id": 609,
+                "relevance": 5
+            },
+            {
+                "id": 634,
+                "relevance": 5
+            },
+            {
+                "id": 665,
+                "relevance": 5
+            },
+            {
+                "id": 690,
+                "relevance": 5
+            },
+            {
+                "id": 704,
+                "relevance": 5
+            },
+            {
+                "id": 785,
+                "relevance": 5
+            },
+            {
+                "id": 791,
+                "relevance": 5
+            },
+            {
+                "id": 805,
+                "relevance": 5
+            },
+            {
+                "id": 833,
+                "relevance": 5
+            },
+            {
+                "id": 844,
+                "relevance": 5
+            },
+            {
+                "id": 845,
+                "relevance": 5
+            },
+            {
+                "id": 846,
+                "relevance": 5
+            },
+            {
+                "id": 891,
+                "relevance": 5
+            },
+            {
+                "id": 913,
+                "relevance": 5
+            },
+            {
+                "id": 915,
+                "relevance": 5
+            },
+            {
+                "id": 933,
+                "relevance": 5
+            },
+            {
+                "id": 965,
+                "relevance": 5
+            },
+            {
+                "id": 967,
+                "relevance": 5
+            },
+            {
+                "id": 973,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "stemming",
+            "partial_term"
+        ],
+        "comment": "Kurzform von Schadenbearbeitung."
+    },
+    {
+        "test_id": 5,
+        "query": "IT Sicherheit",
+        "results": [
+            {
+                "id": 30,
+                "relevance": 5
+            },
+            {
+                "id": 37,
+                "relevance": 5
+            },
+            {
+                "id": 46,
+                "relevance": 5
+            },
+            {
+                "id": 124,
+                "relevance": 5
+            },
+            {
+                "id": 125,
+                "relevance": 5
+            },
+            {
+                "id": 142,
+                "relevance": 5
+            },
+            {
+                "id": 180,
+                "relevance": 5
+            },
+            {
+                "id": 181,
+                "relevance": 5
+            },
+            {
+                "id": 211,
+                "relevance": 5
+            },
+            {
+                "id": 244,
+                "relevance": 5
+            },
+            {
+                "id": 246,
+                "relevance": 5
+            },
+            {
+                "id": 328,
+                "relevance": 5
+            },
+            {
+                "id": 348,
+                "relevance": 5
+            },
+            {
+                "id": 378,
+                "relevance": 5
+            },
+            {
+                "id": 420,
+                "relevance": 5
+            },
+            {
+                "id": 422,
+                "relevance": 5
+            },
+            {
+                "id": 465,
+                "relevance": 5
+            },
+            {
+                "id": 508,
+                "relevance": 5
+            },
+            {
+                "id": 558,
+                "relevance": 5
+            },
+            {
+                "id": 560,
+                "relevance": 5
+            },
+            {
+                "id": 588,
+                "relevance": 5
+            },
+            {
+                "id": 594,
+                "relevance": 5
+            },
+            {
+                "id": 632,
+                "relevance": 5
+            },
+            {
+                "id": 635,
+                "relevance": 5
+            },
+            {
+                "id": 647,
+                "relevance": 5
+            },
+            {
+                "id": 708,
+                "relevance": 5
+            },
+            {
+                "id": 722,
+                "relevance": 5
+            },
+            {
+                "id": 726,
+                "relevance": 5
+            },
+            {
+                "id": 771,
+                "relevance": 5
+            },
+            {
+                "id": 798,
+                "relevance": 5
+            },
+            {
+                "id": 830,
+                "relevance": 5
+            },
+            {
+                "id": 935,
+                "relevance": 5
+            },
+            {
+                "id": 940,
+                "relevance": 5
+            },
+            {
+                "id": 953,
+                "relevance": 5
+            },
+            {
+                "id": 959,
+                "relevance": 5
+            },
+            {
+                "id": 960,
+                "relevance": 5
+            },
+            {
+                "id": 988,
+                "relevance": 5
+            },
+            {
+                "id": 991,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "normalization"
+        ],
+        "comment": "Bindestrich- und Schreibvarianten von IT-Sicherheit."
+    },
+    {
+        "test_id": 6,
+        "query": "Microsoft",
+        "results": [
+            {
+                "id": 5,
+                "relevance": 5
+            },
+            {
+                "id": 39,
+                "relevance": 5
+            },
+            {
+                "id": 45,
+                "relevance": 5
+            },
+            {
+                "id": 66,
+                "relevance": 5
+            },
+            {
+                "id": 76,
+                "relevance": 5
+            },
+            {
+                "id": 100,
+                "relevance": 5
+            },
+            {
+                "id": 118,
+                "relevance": 5
+            },
+            {
+                "id": 137,
+                "relevance": 5
+            },
+            {
+                "id": 155,
+                "relevance": 5
+            },
+            {
+                "id": 158,
+                "relevance": 5
+            },
+            {
+                "id": 168,
+                "relevance": 5
+            },
+            {
+                "id": 186,
+                "relevance": 5
+            },
+            {
+                "id": 188,
+                "relevance": 5
+            },
+            {
+                "id": 210,
+                "relevance": 5
+            },
+            {
+                "id": 252,
+                "relevance": 5
+            },
+            {
+                "id": 286,
+                "relevance": 5
+            },
+            {
+                "id": 293,
+                "relevance": 5
+            },
+            {
+                "id": 317,
+                "relevance": 5
+            },
+            {
+                "id": 342,
+                "relevance": 5
+            },
+            {
+                "id": 344,
+                "relevance": 5
+            },
+            {
+                "id": 361,
+                "relevance": 5
+            },
+            {
+                "id": 385,
+                "relevance": 5
+            },
+            {
+                "id": 412,
+                "relevance": 5
+            },
+            {
+                "id": 459,
+                "relevance": 5
+            },
+            {
+                "id": 467,
+                "relevance": 5
+            },
+            {
+                "id": 468,
+                "relevance": 5
+            },
+            {
+                "id": 502,
+                "relevance": 5
+            },
+            {
+                "id": 503,
+                "relevance": 5
+            },
+            {
+                "id": 510,
+                "relevance": 5
+            },
+            {
+                "id": 525,
+                "relevance": 5
+            },
+            {
+                "id": 527,
+                "relevance": 5
+            },
+            {
+                "id": 546,
+                "relevance": 5
+            },
+            {
+                "id": 562,
+                "relevance": 5
+            },
+            {
+                "id": 568,
+                "relevance": 5
+            },
+            {
+                "id": 586,
+                "relevance": 5
+            },
+            {
+                "id": 599,
+                "relevance": 5
+            },
+            {
+                "id": 643,
+                "relevance": 5
+            },
+            {
+                "id": 650,
+                "relevance": 5
+            },
+            {
+                "id": 732,
+                "relevance": 5
+            },
+            {
+                "id": 793,
+                "relevance": 5
+            },
+            {
+                "id": 815,
+                "relevance": 5
+            },
+            {
+                "id": 835,
+                "relevance": 5
+            },
+            {
+                "id": 836,
+                "relevance": 5
+            },
+            {
+                "id": 875,
+                "relevance": 5
+            },
+            {
+                "id": 917,
+                "relevance": 5
+            },
+            {
+                "id": 931,
+                "relevance": 5
+            },
+            {
+                "id": 934,
+                "relevance": 5
+            },
+            {
+                "id": 968,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "partial_term",
+            "title",
+            "tags"
+        ],
+        "comment": "Teilbegriff für Microsoft 365."
+    },
+    {
+        "test_id": 7,
+        "query": "Homeoffice",
+        "results": [
+            {
+                "id": 27,
+                "relevance": 4
+            },
+            {
+                "id": 53,
+                "relevance": 4
+            },
+            {
+                "id": 60,
+                "relevance": 4
+            },
+            {
+                "id": 80,
+                "relevance": 4
+            },
+            {
+                "id": 102,
+                "relevance": 4
+            },
+            {
+                "id": 143,
+                "relevance": 4
+            },
+            {
+                "id": 253,
+                "relevance": 4
+            },
+            {
+                "id": 279,
+                "relevance": 4
+            },
+            {
+                "id": 321,
+                "relevance": 4
+            },
+            {
+                "id": 326,
+                "relevance": 4
+            },
+            {
+                "id": 396,
+                "relevance": 4
+            },
+            {
+                "id": 399,
+                "relevance": 4
+            },
+            {
+                "id": 408,
+                "relevance": 4
+            },
+            {
+                "id": 440,
+                "relevance": 4
+            },
+            {
+                "id": 451,
+                "relevance": 4
+            },
+            {
+                "id": 470,
+                "relevance": 4
+            },
+            {
+                "id": 498,
+                "relevance": 4
+            },
+            {
+                "id": 499,
+                "relevance": 4
+            },
+            {
+                "id": 506,
+                "relevance": 4
+            },
+            {
+                "id": 507,
+                "relevance": 4
+            },
+            {
+                "id": 523,
+                "relevance": 4
+            },
+            {
+                "id": 584,
+                "relevance": 4
+            },
+            {
+                "id": 611,
+                "relevance": 4
+            },
+            {
+                "id": 653,
+                "relevance": 4
+            },
+            {
+                "id": 669,
+                "relevance": 4
+            },
+            {
+                "id": 705,
+                "relevance": 4
+            },
+            {
+                "id": 706,
+                "relevance": 4
+            },
+            {
+                "id": 710,
+                "relevance": 4
+            },
+            {
+                "id": 729,
+                "relevance": 4
+            },
+            {
+                "id": 736,
+                "relevance": 4
+            },
+            {
+                "id": 740,
+                "relevance": 4
+            },
+            {
+                "id": 765,
+                "relevance": 4
+            },
+            {
+                "id": 775,
+                "relevance": 4
+            },
+            {
+                "id": 779,
+                "relevance": 4
+            },
+            {
+                "id": 825,
+                "relevance": 4
+            },
+            {
+                "id": 826,
+                "relevance": 4
+            },
+            {
+                "id": 832,
+                "relevance": 4
+            },
+            {
+                "id": 854,
+                "relevance": 4
+            },
+            {
+                "id": 894,
+                "relevance": 4
+            },
+            {
+                "id": 941,
+                "relevance": 4
+            },
+            {
+                "id": 955,
+                "relevance": 4
+            },
+            {
+                "id": 956,
+                "relevance": 4
+            }
+        ],
+        "requiredMethods": [
+            "synonym"
+        ],
+        "comment": "Soll später Remote-Work-Kurse finden."
+    },
+    {
+        "test_id": 8,
+        "query": "Präsentation",
+        "results": [
+            {
+                "id": 56,
+                "relevance": 5
+            },
+            {
+                "id": 162,
+                "relevance": 5
+            },
+            {
+                "id": 167,
+                "relevance": 5
+            },
+            {
+                "id": 170,
+                "relevance": 5
+            },
+            {
+                "id": 176,
+                "relevance": 5
+            },
+            {
+                "id": 203,
+                "relevance": 5
+            },
+            {
+                "id": 217,
+                "relevance": 5
+            },
+            {
+                "id": 218,
+                "relevance": 5
+            },
+            {
+                "id": 249,
+                "relevance": 5
+            },
+            {
+                "id": 259,
+                "relevance": 5
+            },
+            {
+                "id": 269,
+                "relevance": 5
+            },
+            {
+                "id": 289,
+                "relevance": 5
+            },
+            {
+                "id": 304,
+                "relevance": 5
+            },
+            {
+                "id": 313,
+                "relevance": 5
+            },
+            {
+                "id": 320,
+                "relevance": 5
+            },
+            {
+                "id": 419,
+                "relevance": 5
+            },
+            {
+                "id": 441,
+                "relevance": 5
+            },
+            {
+                "id": 450,
+                "relevance": 5
+            },
+            {
+                "id": 477,
+                "relevance": 5
+            },
+            {
+                "id": 522,
+                "relevance": 5
+            },
+            {
+                "id": 567,
+                "relevance": 5
+            },
+            {
+                "id": 583,
+                "relevance": 5
+            },
+            {
+                "id": 602,
+                "relevance": 5
+            },
+            {
+                "id": 610,
+                "relevance": 5
+            },
+            {
+                "id": 617,
+                "relevance": 5
+            },
+            {
+                "id": 655,
+                "relevance": 5
+            },
+            {
+                "id": 778,
+                "relevance": 5
+            },
+            {
+                "id": 804,
+                "relevance": 5
+            },
+            {
+                "id": 816,
+                "relevance": 5
+            },
+            {
+                "id": 817,
+                "relevance": 5
+            },
+            {
+                "id": 819,
+                "relevance": 5
+            },
+            {
+                "id": 877,
+                "relevance": 5
+            },
+            {
+                "id": 923,
+                "relevance": 5
+            },
+            {
+                "id": 929,
+                "relevance": 5
+            },
+            {
+                "id": 986,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "stemming"
+        ],
+        "comment": "Kurzform für Präsentationstechniken."
+    },
+    {
+        "test_id": 9,
+        "query": "Qualität",
+        "results": [
+            {
+                "id": 47,
+                "relevance": 5
+            },
+            {
+                "id": 52,
+                "relevance": 5
+            },
+            {
+                "id": 104,
+                "relevance": 5
+            },
+            {
+                "id": 164,
+                "relevance": 5
+            },
+            {
+                "id": 194,
+                "relevance": 5
+            },
+            {
+                "id": 200,
+                "relevance": 5
+            },
+            {
+                "id": 207,
+                "relevance": 5
+            },
+            {
+                "id": 219,
+                "relevance": 5
+            },
+            {
+                "id": 245,
+                "relevance": 5
+            },
+            {
+                "id": 274,
+                "relevance": 5
+            },
+            {
+                "id": 277,
+                "relevance": 5
+            },
+            {
+                "id": 359,
+                "relevance": 5
+            },
+            {
+                "id": 391,
+                "relevance": 5
+            },
+            {
+                "id": 454,
+                "relevance": 5
+            },
+            {
+                "id": 463,
+                "relevance": 5
+            },
+            {
+                "id": 473,
+                "relevance": 5
+            },
+            {
+                "id": 485,
+                "relevance": 5
+            },
+            {
+                "id": 487,
+                "relevance": 5
+            },
+            {
+                "id": 497,
+                "relevance": 5
+            },
+            {
+                "id": 555,
+                "relevance": 5
+            },
+            {
+                "id": 576,
+                "relevance": 5
+            },
+            {
+                "id": 638,
+                "relevance": 5
+            },
+            {
+                "id": 664,
+                "relevance": 5
+            },
+            {
+                "id": 693,
+                "relevance": 5
+            },
+            {
+                "id": 718,
+                "relevance": 5
+            },
+            {
+                "id": 719,
+                "relevance": 5
+            },
+            {
+                "id": 751,
+                "relevance": 5
+            },
+            {
+                "id": 753,
+                "relevance": 5
+            },
+            {
+                "id": 792,
+                "relevance": 5
+            },
+            {
+                "id": 916,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "stemming"
+        ],
+        "comment": "Kurzform für Qualitätsmanagement."
+    },
+    {
+        "test_id": 10,
+        "query": "Kommunikation",
+        "results": [
+            {
+                "id": 9,
+                "relevance": 5
+            },
+            {
+                "id": 11,
+                "relevance": 5
+            },
+            {
+                "id": 19,
+                "relevance": 5
+            },
+            {
+                "id": 28,
+                "relevance": 5
+            },
+            {
+                "id": 36,
+                "relevance": 5
+            },
+            {
+                "id": 71,
+                "relevance": 5
+            },
+            {
+                "id": 79,
+                "relevance": 5
+            },
+            {
+                "id": 91,
+                "relevance": 5
+            },
+            {
+                "id": 190,
+                "relevance": 5
+            },
+            {
+                "id": 228,
+                "relevance": 5
+            },
+            {
+                "id": 232,
+                "relevance": 5
+            },
+            {
+                "id": 311,
+                "relevance": 5
+            },
+            {
+                "id": 323,
+                "relevance": 5
+            },
+            {
+                "id": 331,
+                "relevance": 5
+            },
+            {
+                "id": 390,
+                "relevance": 5
+            },
+            {
+                "id": 411,
+                "relevance": 5
+            },
+            {
+                "id": 417,
+                "relevance": 5
+            },
+            {
+                "id": 444,
+                "relevance": 5
+            },
+            {
+                "id": 460,
+                "relevance": 5
+            },
+            {
+                "id": 482,
+                "relevance": 5
+            },
+            {
+                "id": 490,
+                "relevance": 5
+            },
+            {
+                "id": 496,
+                "relevance": 5
+            },
+            {
+                "id": 520,
+                "relevance": 5
+            },
+            {
+                "id": 574,
+                "relevance": 5
+            },
+            {
+                "id": 593,
+                "relevance": 5
+            },
+            {
+                "id": 644,
+                "relevance": 5
+            },
+            {
+                "id": 663,
+                "relevance": 5
+            },
+            {
+                "id": 703,
+                "relevance": 5
+            },
+            {
+                "id": 713,
+                "relevance": 5
+            },
+            {
+                "id": 717,
+                "relevance": 5
+            },
+            {
+                "id": 720,
+                "relevance": 5
+            },
+            {
+                "id": 746,
+                "relevance": 5
+            },
+            {
+                "id": 760,
+                "relevance": 5
+            },
+            {
+                "id": 774,
+                "relevance": 5
+            },
+            {
+                "id": 799,
+                "relevance": 5
+            },
+            {
+                "id": 801,
+                "relevance": 5
+            },
+            {
+                "id": 843,
+                "relevance": 5
+            },
+            {
+                "id": 851,
+                "relevance": 5
+            },
+            {
+                "id": 856,
+                "relevance": 5
+            },
+            {
+                "id": 859,
+                "relevance": 5
+            },
+            {
+                "id": 866,
+                "relevance": 5
+            },
+            {
+                "id": 868,
+                "relevance": 5
+            },
+            {
+                "id": 995,
+                "relevance": 5
+            }
+        ],
+        "requiredMethods": [
+            "exact",
+            "title",
+            "fulltext",
+            "tags",
+            "ranking"
+        ],
+        "comment": "Viele relevante Treffer. Dient insbesondere zum Vergleich verschiedener Ranking-Algorithmen."
+    }
+]

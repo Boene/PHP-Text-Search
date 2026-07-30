@@ -31,10 +31,11 @@ WHERE
             )
     )
     AND t.word NOT LIKE '\"%' 
-    AND t.word NOT LIKE '\'' 
+    AND t.word NOT LIKE '''%' 
     AND t.word NOT LIKE '! %'
     AND t.word NOT LIKE '(%'
     AND t.word NOT LIKE '.%'
+    AND t.word NOT LIKE '%...%'
 ORDER BY t.synset_id;
 ";
 
