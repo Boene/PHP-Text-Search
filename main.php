@@ -9,7 +9,7 @@ require_once dirname(__FILE__) . '/src/Search/SearchEngine.php';
 require_once dirname(__FILE__) . '/src/Search/Indexing.php';
 require_once dirname(__FILE__) . '/src/Test/TestEngine.php';
 
-$filePath_content = __DIR__."/content/content.json";
+$filePath_content = __DIR__."/content/content_v3.json";
 $json_file = file_get_contents($filePath_content);
 $data = json_decode($json_file, true);
 
@@ -17,7 +17,7 @@ $filePath_index = __DIR__."/content/index.json";
 $json_file_index = file_get_contents($filePath_index);
 $index = json_decode($json_file_index, true);
 
-$filePath_query = __DIR__."/tests/queries_v2.json";
+$filePath_query = __DIR__."/tests/gold_standard_v3.json";
 $json_file_query = file_get_contents($filePath_query);
 $queries = json_decode($json_file_query, true);
 
@@ -41,7 +41,6 @@ $tokenProcessor_config =        /// Configuration of Indexing methods.
 
 $Tokenizer = new Tokenizer();
 $Normalizer = new Normalizer($replace_numbers = true);
-/// $StopwordFilter = new StopwordFilter($stopwords);
 $SearchEngine = new SearchEngine($index, $synonyms, $test = true);
 $TestEngine = new TestEngine($SearchEngine, $queries, $index);
 
@@ -61,5 +60,5 @@ $token_Pipeline = new TokenPipeline($token_processors);         /// This Pipelin
 
 $Indexer = new Indexer($Tokenizer, $Normalizer, $SearchEngine, $token_Pipeline, $index, $data, $filePath_index);
 
-$TestEngine->runQuery(10);
+$TestEngine->runQuery(2);
 /// $Indexer->createIndex();

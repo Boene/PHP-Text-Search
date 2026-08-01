@@ -1,0 +1,17 @@
+Best Practice: Entscheidungen nachvollziehbar dokumentieren und regelmäßig überprüfen.
+
+---
+
+Best Practice: Informationen möglichst an einer zentralen Stelle pflegen.
+
+---
+
+Best Practice: Rollen und Verantwortlichkeiten vor Beginn eines Prozesses eindeutig festlegen.
+
+---
+
+Best Practice: Komplexe Aufgaben in überschaubare Einzelschritte unterteilen.
+
+---
+
+Best Practice: Rückmeldungen aus der Praxis regelmäßig in bestehende Abläufe einfließen lassen.

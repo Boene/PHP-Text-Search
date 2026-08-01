@@ -43,11 +43,11 @@ class SearchEngine
             return [];
         } else {
             if (array_key_exists($word, $this->index)) {
-                $this->showResults($this->index[$word]);
-                return;
+                $this->showResults($this->index[$word], $word);
+                return ($this->index[$word]);
             }
-            $this->showResults(null);
-            return;
+            $this->showResults(null, $word);
+            return [];
         }
     }
 
@@ -75,13 +75,13 @@ class SearchEngine
 
     /// ### Private Functions ### ///
 
-    private function showResults(array|null $results)
+    private function showResults(array|null $results, string $word)
     {
         if (is_null($results)) {
-            echo("No result has been found.");
+            echo("No result has been found for '$word'.");
             return;
         }
-        $output = "Results have been found in module(s) ";
+        $output = "Results for '$word' have been found in module(s) ";
         foreach ($results as $module) {
             $output = $output . $module . ", ";
         }

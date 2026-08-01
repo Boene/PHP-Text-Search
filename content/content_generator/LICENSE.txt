@@ -1,0 +1,3 @@
+This project was generated as part of a search-engine benchmarking dataset.
+
+All generated content is synthetic and intended for software testing and experimentation.

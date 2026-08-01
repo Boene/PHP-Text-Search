@@ -1,0 +1,151 @@
+[
+  {
+    "test_id": 1,
+    "query": "Datenschutz",
+    "results": [
+      { "content_id": 1, "relevance": 4 },
+      { "content_id": 25, "relevance": 4 },
+      { "content_id": 49, "relevance": 4 },
+      { "content_id": 73, "relevance": 4 },
+      { "content_id": 97, "relevance": 4 }
+    ],
+    "required_methods": [
+      "title_match",
+      "fulltext",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 2,
+    "query": "IT Sicherheit",
+    "results": [
+      { "content_id": 2, "relevance": 4 },
+      { "content_id": 26, "relevance": 4 },
+      { "content_id": 50, "relevance": 4 },
+      { "content_id": 74, "relevance": 4 },
+      { "content_id": 98, "relevance": 4 }
+    ],
+    "required_methods": [
+      "tokenization",
+      "fulltext",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 3,
+    "query": "DSGVO",
+    "results": [
+      { "content_id": 15, "relevance": 4 },
+      { "content_id": 39, "relevance": 4 },
+      { "content_id": 63, "relevance": 4 },
+      { "content_id": 87, "relevance": 4 }
+    ],
+    "required_methods": [
+      "fulltext",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 4,
+    "query": "Versicherung",
+    "results": [
+      { "content_id": 21, "relevance": 4 },
+      { "content_id": 45, "relevance": 4 },
+      { "content_id": 69, "relevance": 4 },
+      { "content_id": 93, "relevance": 4 }
+    ],
+    "required_methods": [
+      "stemming",
+      "fulltext",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 5,
+    "query": "Schaden",
+    "results": [
+      { "content_id": 22, "relevance": 4 },
+      { "content_id": 46, "relevance": 4 },
+      { "content_id": 70, "relevance": 4 },
+      { "content_id": 94, "relevance": 4 }
+    ],
+    "required_methods": [
+      "stemming",
+      "fulltext"
+    ]
+  },
+  {
+    "test_id": 6,
+    "query": "Kunden beraten",
+    "results": [
+      { "content_id": 23, "relevance": 4 },
+      { "content_id": 47, "relevance": 4 },
+      { "content_id": 71, "relevance": 4 },
+      { "content_id": 95, "relevance": 4 }
+    ],
+    "required_methods": [
+      "stemming",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 7,
+    "query": "Homeoffice",
+    "results": [
+      { "content_id": 16, "relevance": 4 },
+      { "content_id": 40, "relevance": 4 },
+      { "content_id": 64, "relevance": 4 },
+      { "content_id": 88, "relevance": 4 }
+    ],
+    "required_methods": [
+      "synonyms",
+      "fulltext",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 8,
+    "query": "Cyber Security",
+    "results": [
+      { "content_id": 14, "relevance": 4 },
+      { "content_id": 38, "relevance": 4 },
+      { "content_id": 62, "relevance": 4 },
+      { "content_id": 86, "relevance": 4 }
+    ],
+    "required_methods": [
+      "tokenization",
+      "synonyms",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 9,
+    "query": "Projekt planen",
+    "results": [
+      { "content_id": 10, "relevance": 4 },
+      { "content_id": 34, "relevance": 4 },
+      { "content_id": 58, "relevance": 4 },
+      { "content_id": 82, "relevance": 4 }
+    ],
+    "required_methods": [
+      "stemming",
+      "fulltext",
+      "ranking"
+    ]
+  },
+  {
+    "test_id": 10,
+    "query": "Konflikte lösen",
+    "results": [
+      { "content_id": 18, "relevance": 4 },
+      { "content_id": 42, "relevance": 4 },
+      { "content_id": 66, "relevance": 4 },
+      { "content_id": 90, "relevance": 4 }
+    ],
+    "required_methods": [
+      "stemming",
+      "ranking",
+      "fulltext"
+    ]
+  }
+]

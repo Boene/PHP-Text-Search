@@ -1,0 +1,37 @@
+Bereich | Beschreibung
+--- | ---
+Ziel | Grundlagen sicher anwenden
+Dauer | 30–45 Minuten
+Format | E-Learning
+
+---
+
+Phase | Schwerpunkt
+--- | ---
+Vorbereitung | Informationen sammeln
+Durchführung | Maßnahmen umsetzen
+Abschluss | Ergebnisse dokumentieren
+
+---
+
+Rolle | Aufgabe
+--- | ---
+Mitarbeitende | Inhalte anwenden
+Führungskraft | Entscheidungen begleiten
+Team | Zusammenarbeit sicherstellen
+
+---
+
+Thema | Nutzen
+--- | ---
+Dokumentation | Nachvollziehbarkeit
+Kommunikation | Transparenz
+Qualität | Fehler vermeiden
+
+---
+
+Schritt | Ziel
+--- | ---
+Analyse | Ausgangslage verstehen
+Bewertung | Optionen vergleichen
+Umsetzung | Lösung anwenden

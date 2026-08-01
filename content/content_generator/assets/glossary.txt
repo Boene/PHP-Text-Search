@@ -1,0 +1,17 @@
+Analyse: Systematische Untersuchung einer Situation zur Vorbereitung einer Entscheidung.
+
+---
+
+Dokumentation: Nachvollziehbare Erfassung relevanter Informationen und Ergebnisse.
+
+---
+
+Maßnahme: Konkreter Handlungsschritt zur Erreichung eines definierten Ziels.
+
+---
+
+Prozess: Wiederkehrende Abfolge von Arbeitsschritten mit festgelegtem Ablauf.
+
+---
+
+Risiko: Möglichkeit eines unerwünschten Ereignisses oder Ergebnisses.

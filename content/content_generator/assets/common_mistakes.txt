@@ -1,0 +1,17 @@
+Häufiger Fehler: Entscheidungen werden getroffen, bevor alle relevanten Informationen vorliegen.
+
+---
+
+Häufiger Fehler: Zuständigkeiten sind unklar, wodurch Bearbeitungsschritte doppelt oder gar nicht ausgeführt werden.
+
+---
+
+Häufiger Fehler: Wichtige Änderungen werden nicht dokumentiert und sind später nicht mehr nachvollziehbar.
+
+---
+
+Häufiger Fehler: Checklisten werden übersprungen, obwohl sie bekannte Fehler vermeiden könnten.
+
+---
+
+Häufiger Fehler: Kommunikation erfolgt zu spät oder erreicht nicht alle Beteiligten.
