@@ -5,37 +5,34 @@ class SearchEngine
     /// ### Public Properties ### ///
 
     public bool $test;
+    public Tokenizer $tokenizer;
+    public Normalizer $normalizer;
+    public Indexer $indexer;
 
     /// ### Private Properties ### ///
 
     private array $index;
+    private array $tag_index;
     private array $synonyms;
 
     /// ### Constructor ### ///
 
-    public function __construct(array $index, array $synonyms, bool $test = false)
+    public function __construct(Tokenizer $tokenizer, Normalizer $normalizer, Indexer $indexer, array $index, array $tag_index, array $synonyms, bool $test = false)
     {
         $this->index = $index;
+        $this->tag_index = $tag_index;
         $this->test = $test;
         $this->synonyms = $synonyms;
+        $this->tokenizer = $tokenizer;
+        $this->normalizer = $normalizer;
+        $this->indexer = $indexer;
     }
 
     /// ### Public Functions ### ///
 
-    public function getDocumentByID(int $id, array $documents): ?array
-    {
-        foreach ($documents as $document) {
-            if ($document["id"] == $id) {
-                return $document;
-            }
-        }
-
-        return null;
-    }
-
     public function searchForWord(string $word)
     {
-        $word = $this->minFormatWord($word);
+        $word = $this->normalizer->preprocess($word);
         if ($this->test == true) {
             if (array_key_exists($word, $this->index)) {
                 return ($this->index[$word]);
@@ -51,6 +48,21 @@ class SearchEngine
         }
     }
 
+    public function searchPhraseInTags(string $search_phrase)          /// this function returns the search results only using the contents tags
+    {
+        $search_phrase = $this->normalizer->preprocess($search_phrase);
+        $search_words = $this->tokenizer->preprocess($search_phrase);
+        $results = [];
+
+        foreach ($search_words as $word) {
+            ######################################################################################################
+            ######################################################################################################
+            ######################################################################################################
+            ######################################################################################################
+        }
+        return $results;
+    }
+
     public function searchForSynonyms(array $word): array
     {
         $begriff = $word[0];
@@ -59,18 +71,6 @@ class SearchEngine
         }
 
         return $word;
-    }
-
-    public function documentToString(array $document): string
-    {
-        $title = $document["title"];
-        $description = $document["description"];
-        $tag_words = "";
-        foreach ($document["tags"] as $tag) {
-            $tag_words = $tag_words . " " . $tag;
-        }
-        $words = $title . " " . $description . " " . $tag_words;
-        return $words;
     }
 
     /// ### Private Functions ### ///
@@ -87,13 +87,6 @@ class SearchEngine
         }
         $output = rtrim($output, ', ');
         echo($output);
-    }
-
-    private function minFormatWord(string $word): string
-    {
-        $word = mb_strtolower($word);
-        $word = trim($word);
-        return $word;
     }
 
 }

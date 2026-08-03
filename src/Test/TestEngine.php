@@ -27,23 +27,21 @@ class TestEngine
 
     private SearchEngine $search_engine;
     private array $queries;
-    private array $index;
 
     /// ### Constructor ### ///
 
-    public function __construct(SearchEngine $search_engine, array $queries, array $index)
+    public function __construct(SearchEngine $search_engine, array $queries)
     {
         $this->search_engine = $search_engine;
         $this->queries = $queries;
-        $this->index = $index;
     }
 
     /// ### Public Functions ### ///
 
-    public function runQuery(int $count, int $start = 1)
-    {
-        $match_rate_list = [];
-        for ($i = $start; $i <= $count; $i += 1) {
+    public function runQuery(int $count, int $start = 1)            /// This function is designed for testing ($test == true) under lab conditions,
+    {                                                               /// meaning that the search looks at descriptive information of the content as well as its tags
+        $match_rate_list = [];                                      /// and has the perfect answers set in advance in the form of a list of ids.
+        for ($i = $start; $i <= $count; $i += 1) {                  /// With $test == false, it simply returns all the ids of matched content.
             $query_data = $this->getQueryByID($i);
             $search_result = $this->search_engine->searchForWord($query_data["query"]);
             if ($this->search_engine->test != true) {
@@ -58,10 +56,20 @@ class TestEngine
                 $this->calcRelevanceScore($matches, $query_data);
             }
         }
-        $tot_match_rate = array_sum($match_rate_list) / count($match_rate_list) * 100;
-        echo("\n####################################\n");
-        echo("# --- Total match rate: $tot_match_rate % --- #\n");
-        echo("####################################");
+        if ($this->search_engine->test == true) {
+            $tot_match_rate = array_sum($match_rate_list) / count($match_rate_list) * 100;
+            echo("\n####################################\n");
+            echo("# --- Total match rate: $tot_match_rate % --- #\n");
+            echo("####################################");
+        }
+    }
+
+    public function testAgainstTags()           /// This function compares the search results without using tags against only using tags, which are considered as truth
+    {
+        ######################################################################################################
+        ######################################################################################################
+        ######################################################################################################
+        ######################################################################################################
     }
 
     /// ### Private Functions ### ///
@@ -132,7 +140,7 @@ class TestEngine
         }
         echo("\nTest results for Query-ID $id with test word '$word':\n");
         echo("Matches: $match_string\n");
-        echo("Matched $count_matches / $count_expected ($match_percent %) correctly.\n");
+        echo("Matched $count_matches / $count_expected (". number_format($match_percent, 2) ."%) correctly.\n");
         echo("Misses: $miss_string\n");
         echo("Unexpected matches: $unexpected_string\n");
     }

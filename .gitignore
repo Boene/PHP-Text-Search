@@ -24,6 +24,7 @@ src/OpenThes/openthesaurus_dump.sql
 
 # Index
 content/index.json
+content/index_tags.json
 
 # Old Data
 tests/queries_old.json

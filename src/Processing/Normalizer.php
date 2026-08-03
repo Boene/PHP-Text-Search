@@ -4,15 +4,17 @@ class Normalizer
 {
     /// ### Public Properties ### ///
 
-    public bool $replace_numbers;
+    public bool $replace_numbers;           /// true: Numbers are collectively removed with punctuation || false: Numbers are kept like normal characters
+    public bool $remove_hyphened_terms;         /// true: "IT-Security" becomes "IT Security" || false: "IT-Security" stays as is
 
     /// ### Private Properties ### ///
 
     /// ### Constructor ### ///
 
-    public function __construct(bool $replace_numbers)
+    public function __construct(bool $replace_numbers, bool $remove_hyphened_terms)
     {
         $this->replace_numbers = $replace_numbers;
+        $this->remove_hyphened_terms = $remove_hyphened_terms;
     }
 
     /// ### Public Functions ### ///
@@ -37,9 +39,21 @@ class Normalizer
     private function removePunctuation(string $text): string
     {
         if ($this->replace_numbers) {
-            $text = preg_replace("/[^a-zßäöü]+/i", " ", $text);
+            if ($this->remove_hyphened_terms) {
+                $text = preg_replace("/[^a-zßäöü]+/iu", " ", $text);
+            } else {
+                $text = preg_replace("/(?<=[a-zäöüß])-(?=[a-zäöüß])/iu", "###HYPHEN###", $text);
+                $text = preg_replace("/[^a-zßäöü]+/iu", " ", $text);
+                $text = str_replace("###HYPHEN###", "-", $text);
+            }
         } else {
-            $text = preg_replace("/[^a-z0-9ßäöü]+/i", " ", $text);
+            if ($this->remove_hyphened_terms) {
+                $text = preg_replace("/[^a-z0-9ßäöü]+/iu", " ", $text);
+            } else {
+                $text = preg_replace("/(?<=[a-z0-9äöüß])-(?=[a-z0-9äöüß])/iu", "###HYPHEN###", $text);
+                $text = preg_replace("/[^a-z0-9ßäöü]+/iu", " ", $text);
+                $text = str_replace("###HYPHEN###", "-", $text);
+            }
         }
         return $text;
     }

@@ -21,13 +21,17 @@ $filePath_query = __DIR__."/tests/gold_standard_v3.json";
 $json_file_query = file_get_contents($filePath_query);
 $queries = json_decode($json_file_query, true);
 
+$filePath_tag_index = __DIR__."/content/index_tags.json";
+$json_file_tag_index = file_get_contents($filePath_tag_index);
+$tag_index = json_decode($json_file_tag_index, true);
+
 $filePath_swords = __DIR__."/content/stopwords.json";
 $json_file_swords = file_get_contents($filePath_swords);
 $stopwords = json_decode($json_file_swords, true);
 
-$filePath_query = __DIR__."/src/OpenThes/synonyms.json";
-$json_file_query = file_get_contents($filePath_query);
-$synonyms = json_decode($json_file_query, true);
+$filePath_synonyms = __DIR__."/src/OpenThes/synonyms.json";
+$json_file_synonyms = file_get_contents($filePath_synonyms);
+$synonyms = json_decode($json_file_synonyms, true);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -40,9 +44,7 @@ $tokenProcessor_config =        /// Configuration of Indexing methods.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $Tokenizer = new Tokenizer();
-$Normalizer = new Normalizer($replace_numbers = true);
-$SearchEngine = new SearchEngine($index, $synonyms, $test = true);
-$TestEngine = new TestEngine($SearchEngine, $queries, $index);
+$Normalizer = new Normalizer($replace_numbers = true, $remove_hyphened_terms = false);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,7 +60,10 @@ $token_Pipeline = new TokenPipeline($token_processors);         /// This Pipelin
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$Indexer = new Indexer($Tokenizer, $Normalizer, $SearchEngine, $token_Pipeline, $index, $data, $filePath_index);
+$Indexer = new Indexer($Tokenizer, $Normalizer, $token_Pipeline, $index, $tag_index, $data, $filePath_index, $filePath_tag_index);
+$SearchEngine = new SearchEngine($Tokenizer, $Normalizer, $Indexer, $index, $tag_index, $synonyms, $test = false);
+$TestEngine = new TestEngine($SearchEngine, $queries);
 
-$TestEngine->runQuery(2);
+/// $TestEngine->runQuery(1);
 /// $Indexer->createIndex();
+$Indexer->createTagIndex();
