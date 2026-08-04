@@ -30,37 +30,40 @@ class SearchEngine
 
     /// ### Public Functions ### ///
 
-    public function searchForWord(string $word)
-    {
-        $word = $this->normalizer->preprocess($word);
-        if ($this->test == true) {
-            if (array_key_exists($word, $this->index)) {
-                return ($this->index[$word]);
-            }
-            return [];
-        } else {
-            if (array_key_exists($word, $this->index)) {
-                $this->showResults($this->index[$word], $word);
-                return ($this->index[$word]);
-            }
-            $this->showResults(null, $word);
-            return [];
-        }
-    }
-
-    public function searchPhraseInTags(string $search_phrase)          /// this function returns the search results only using the contents tags
-    {
-        $search_phrase = $this->normalizer->preprocess($search_phrase);
+    public function searchForWord(string $search_phrase)                    // This functions splits any term (multiple words possible) into
+    {                                                                       // an array with all single words and looks for them in the index.
+        $search_phrase = $this->normalizer->preprocess($search_phrase);     // Its thought for normal and tag searches, depending on the given index.
         $search_words = $this->tokenizer->preprocess($search_phrase);
-        $results = [];
-
-        foreach ($search_words as $word) {
-            ######################################################################################################
-            ######################################################################################################
-            ######################################################################################################
-            ######################################################################################################
+        if (count($search_words) == 2) {
+            $combination = $search_words[0] . " " . $search_words[1];
+            $search_words[] = $combination;
+        } elseif (count($search_words) == 3) {
+            $combo1 = $search_words[0] . " " . $search_words[1];
+            $search_words[] = $combo1;
+            $combo2 = $search_words[1] . " " . $search_words[2];
+            $search_words[] = $combo2;
+            $combo3 = $search_words[0] . " " . $search_words[1] . " " . $search_words[2];
+            $search_words[] = $combo3;
         }
-        return $results;
+        $results = [];
+        if ($this->test == true) {
+            foreach ($search_words as $word) {
+                if (array_key_exists($word, $this->index)) {
+                    $results[$word] = $this->index[$word];
+                }
+            }
+            return $results;
+        } else {
+            foreach ($search_words as $word) {
+                if (array_key_exists($word, $this->index)) {
+                    $results[$word] = $this->index[$word];
+                    continue;
+                }
+                $results[$word] = -1.56;
+            }
+            $this->showResults($results);
+            return $results;
+        }
     }
 
     public function searchForSynonyms(array $word): array
@@ -75,18 +78,20 @@ class SearchEngine
 
     /// ### Private Functions ### ///
 
-    private function showResults(array|null $results, string $word)
+    private function showResults(array $results)
     {
-        if (is_null($results)) {
-            echo("No result has been found for '$word'.");
-            return;
+        // print_r($results);
+        foreach ($results as $word => $ids) {
+            $output = "Results for $word have been found in module(s) ";
+            if ($results[$word] == -1.56) {
+                echo("No result has been found for '$word'.\n");
+                continue;
+            }
+            foreach ($ids as $id) {
+                $output = $output . $id . ", ";
+            }
+            $output = rtrim($output, ', ');
+            echo($output);
         }
-        $output = "Results for '$word' have been found in module(s) ";
-        foreach ($results as $module) {
-            $output = $output . $module . ", ";
-        }
-        $output = rtrim($output, ', ');
-        echo($output);
     }
-
 }

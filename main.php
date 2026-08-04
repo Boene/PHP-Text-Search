@@ -64,6 +64,8 @@ $Indexer = new Indexer($Tokenizer, $Normalizer, $token_Pipeline, $index, $tag_in
 $SearchEngine = new SearchEngine($Tokenizer, $Normalizer, $Indexer, $index, $tag_index, $synonyms, $test = false);
 $TestEngine = new TestEngine($SearchEngine, $queries);
 
+
+$SearchEngine->searchForWord("vermittelt");
 /// $TestEngine->runQuery(1);
 /// $Indexer->createIndex();
-$Indexer->createTagIndex();
+/// $Indexer->createTagIndex();
