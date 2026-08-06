@@ -8,6 +8,7 @@ class SearchEngine
     public Tokenizer $tokenizer;
     public Normalizer $normalizer;
     public Indexer $indexer;
+    public ResultShower $resultShower;
 
     /// ### Private Properties ### ///
 
@@ -17,7 +18,7 @@ class SearchEngine
 
     /// ### Constructor ### ///
 
-    public function __construct(Tokenizer $tokenizer, Normalizer $normalizer, Indexer $indexer, array $index, array $tag_index, array $synonyms, bool $test = false)
+    public function __construct(Tokenizer $tokenizer, Normalizer $normalizer, Indexer $indexer, ResultShower $resultShower, array $index, array $tag_index, array $synonyms, bool $test = false)
     {
         $this->index = $index;
         $this->tag_index = $tag_index;
@@ -26,6 +27,7 @@ class SearchEngine
         $this->tokenizer = $tokenizer;
         $this->normalizer = $normalizer;
         $this->indexer = $indexer;
+        $this->resultShower = $resultShower;
     }
 
     /// ### Public Functions ### ///

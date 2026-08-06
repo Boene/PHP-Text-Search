@@ -6,6 +6,7 @@ require_once dirname(__FILE__) . '/src/Processing/Normalizer.php';
 require_once dirname(__FILE__) . '/src/Processing/Tokenizer.php';
 require_once dirname(__FILE__) . '/src/Processing/StopwordFilter.php';
 require_once dirname(__FILE__) . '/src/Search/SearchEngine.php';
+require_once dirname(__FILE__) . '/src/Search/ShowResults.php';
 require_once dirname(__FILE__) . '/src/Search/Indexing.php';
 require_once dirname(__FILE__) . '/src/Test/TestEngine.php';
 
@@ -60,12 +61,13 @@ $token_Pipeline = new TokenPipeline($token_processors);         /// This Pipelin
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+$ResultShower = new ResultShower();
 $Indexer = new Indexer($Tokenizer, $Normalizer, $token_Pipeline, $index, $tag_index, $data, $filePath_index, $filePath_tag_index);
-$SearchEngine = new SearchEngine($Tokenizer, $Normalizer, $Indexer, $index, $tag_index, $synonyms, $test = false);
+$SearchEngine = new SearchEngine($Tokenizer, $Normalizer, $Indexer, $ResultShower, $index, $tag_index, $synonyms, $test = true);
 $TestEngine = new TestEngine($SearchEngine, $queries);
 
 
-$SearchEngine->searchForWord("vermittelt");
-/// $TestEngine->runQuery(1);
+/// $SearchEngine->searchForWord("vermittelt");
+$TestEngine->runQuery(1);
 /// $Indexer->createIndex();
 /// $Indexer->createTagIndex();

@@ -44,23 +44,23 @@ class TestEngine
         for ($i = $start; $i <= $count; $i += 1) {                  /// With $test == false, it simply returns all the ids of matched content.
             $query_data = $this->getQueryByID($i);
             $search_result = $this->search_engine->searchForWord($query_data["query"]);
+            $search_result_ids = [];
+            foreach ($search_result as $word => $ids) {
+                $search_result_ids = array_unique(array_merge($search_result_ids, $ids));
+            }
             if ($this->search_engine->test != true) {
                 continue;
             } else {
                 $expected = array_column($query_data["results"], "content_id");         /// extracts the expected content_id's from the results entry
-                $matches = array_intersect($expected, $search_result);
-                $misses = array_diff($expected, $search_result);
-                $unexpected = array_diff($search_result, $expected);
+                $matches = array_intersect($expected, $search_result_ids);
+                $misses = array_diff($expected, $search_result_ids);
+                $unexpected = array_diff($search_result_ids, $expected);
                 array_push($match_rate_list, count($matches) / count($expected));
-                $this->showTestResults($i, $query_data["query"], $matches, $misses, $unexpected, count($expected));
-                $this->calcRelevanceScore($matches, $query_data);
+                $this->search_engine->resultShower->resultOverview($query_data, $matches, $misses, $unexpected, count($expected), $i, $this->search_engine->test);
             }
         }
         if ($this->search_engine->test == true) {
-            $tot_match_rate = array_sum($match_rate_list) / count($match_rate_list) * 100;
-            echo("\n####################################\n");
-            echo("# --- Total match rate: $tot_match_rate % --- #\n");
-            echo("####################################");
+            $this->search_engine->resultShower->totResult($match_rate_list);
         }
     }
 
@@ -75,7 +75,7 @@ class TestEngine
 
     /// ### Private Functions ### ///
 
-    private function calcRelevanceScore(array $matches, array $query_data)
+    private function calcRelevanceScore(array $matches, array $query_data) // copied
     {
         $score = [
             1 => 0,
@@ -92,8 +92,6 @@ class TestEngine
             "total" => 0
         ];
         foreach ($query_data["results"] as $result) {
-            /// echo($result . " -- " . $result["content_id"]);
-            /// print_r($matches);
             if (in_array($result["content_id"], $matches)) {
                 $score[$result["relevance"]] += $result["relevance"];
                 $score["total"] += $result["relevance"];
