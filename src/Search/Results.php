@@ -1,6 +1,6 @@
 <?php
 
-class ResultShower
+class Resulter
 {
     /// ### Public Properties ### ///
 
@@ -8,7 +8,7 @@ class ResultShower
 
     /// ### Private Properties ### ///
 
-
+    private array $match_rate_list = [];
 
     /// ### Constructor ### ///
 
@@ -16,22 +16,55 @@ class ResultShower
 
     /// ### Public Functions ### ///
 
-    public function resultOverview(array $query_data, array $matches, array $misses, array $unexpected, int $count_expected, int $id, bool $test)
+    public function evaluate(array $query_data, array $search_result_ids)
     {
+        $expected = array_column($query_data["results"], "content_id");             /// Extracts the expected content_id's from the results entry.
+        $matches = array_intersect($expected, $search_result_ids);
+        $misses = array_diff($expected, $search_result_ids);
+        $unexpected = array_diff($search_result_ids, $expected);
+
+        array_push($this->match_rate_list, count($matches) / count($expected));     /// Saves the match% of processed Query for totResult to calc the overall match% at the end.
+
+        return ["query_data" => $query_data, "expected" => $expected, "matches" => $matches, "misses" => $misses, "unexpected" => $unexpected];
+    }
+
+    public function resultOverview(array $evaluated_data, int $id, bool $test)
+    {
+        $query_data = $evaluated_data["query_data"];
+        $expected = $evaluated_data["expected"];
+        $matches = $evaluated_data["matches"];
+        $misses = $evaluated_data["misses"];
+        $unexpected = $evaluated_data["unexpected"];
         if ($test != true) {
             return;
         } else {
-            $this->showTestResults($id, $query_data["query"], $matches, $misses, $unexpected, $count_expected);
+            $this->showTestResults($id, $query_data["query"], $matches, $misses, $unexpected, count($expected));
             $this->calcRelevanceScore($matches, $query_data);
         }
     }
 
-    public function totResult(array $match_rate_list)
+    public function totResult()
     {
-        $tot_match_rate = array_sum($match_rate_list) / count($match_rate_list) * 100;
+        $tot_match_rate = array_sum($this->match_rate_list) / count($this->match_rate_list) * 100;
         echo("\n####################################\n");
         echo("# --- Total match rate: $tot_match_rate % --- #\n");
         echo("####################################");
+    }
+
+    public function showResults(array $results)
+    {
+        foreach ($results as $word => $ids) {
+            $output = "Results for $word have been found in module(s) ";
+            if ($results[$word] == -1.56) {
+                echo("No result has been found for '$word'.\n");
+                continue;
+            }
+            foreach ($ids as $id) {
+                $output = $output . $id . ", ";
+            }
+            $output = rtrim($output, ', ');
+            echo($output);
+        }
     }
 
     /// ### Private Functions ### ///

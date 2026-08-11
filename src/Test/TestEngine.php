@@ -38,39 +38,22 @@ class TestEngine
 
     /// ### Public Functions ### ///
 
-    public function runQuery(int $count, int $start = 1)            /// This function is designed for testing ($test == true) under lab conditions,
-    {                                                               /// meaning that the search looks at descriptive information of the content as well as its tags
-        $match_rate_list = [];                                      /// and has the perfect answers set in advance in the form of a list of ids.
-        for ($i = $start; $i <= $count; $i += 1) {                  /// With $test == false, it simply returns all the ids of matched content.
+    public function runTestQuery(int $count, int $start = 1)                                /// This function is designed for testing ($test == true) under lab conditions,
+    {                                                                                       /// meaning that the search looks at all the content and has the perfect answers                                                            /// set in advance in the form of a list of ids.
+        for ($i = $start; $i <= $count; $i += 1) {                                          /// With $test == false, it simply returns all the ids of matched content.
             $query_data = $this->getQueryByID($i);
             $search_result = $this->search_engine->searchForWord($query_data["query"]);
             $search_result_ids = [];
             foreach ($search_result as $word => $ids) {
                 $search_result_ids = array_unique(array_merge($search_result_ids, $ids));
             }
-            if ($this->search_engine->test != true) {
-                continue;
-            } else {
-                $expected = array_column($query_data["results"], "content_id");         /// extracts the expected content_id's from the results entry
-                $matches = array_intersect($expected, $search_result_ids);
-                $misses = array_diff($expected, $search_result_ids);
-                $unexpected = array_diff($search_result_ids, $expected);
-                array_push($match_rate_list, count($matches) / count($expected));
-                $this->search_engine->resultShower->resultOverview($query_data, $matches, $misses, $unexpected, count($expected), $i, $this->search_engine->test);
-            }
+            $this->search_engine->resulter->resultOverview($this->search_engine->resulter->evaluate($query_data, $search_result_ids), $i, $this->search_engine->test);
         }
-        if ($this->search_engine->test == true) {
-            $this->search_engine->resultShower->totResult($match_rate_list);
-        }
+        $this->search_engine->resulter->totResult();
     }
 
     public function testAgainstTags()           /// This function compares the search results without using tags against only using tags, which are considered as truth
     {
-        ######################################################################################################
-        ######################################################################################################
-        // searchForWord auch für multi-word input? ---> searchForWord($tag) ? || eigene Klasse showResults?
-        ######################################################################################################
-        ######################################################################################################
     }
 
     /// ### Private Functions ### ///

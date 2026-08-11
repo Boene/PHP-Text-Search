@@ -8,7 +8,7 @@ class SearchEngine
     public Tokenizer $tokenizer;
     public Normalizer $normalizer;
     public Indexer $indexer;
-    public ResultShower $resultShower;
+    public Resulter $resulter;
 
     /// ### Private Properties ### ///
 
@@ -18,7 +18,7 @@ class SearchEngine
 
     /// ### Constructor ### ///
 
-    public function __construct(Tokenizer $tokenizer, Normalizer $normalizer, Indexer $indexer, ResultShower $resultShower, array $index, array $tag_index, array $synonyms, bool $test = false)
+    public function __construct(Tokenizer $tokenizer, Normalizer $normalizer, Indexer $indexer, Resulter $resulter, array $index, array $tag_index, array $synonyms, bool $test = false)
     {
         $this->index = $index;
         $this->tag_index = $tag_index;
@@ -27,18 +27,23 @@ class SearchEngine
         $this->tokenizer = $tokenizer;
         $this->normalizer = $normalizer;
         $this->indexer = $indexer;
-        $this->resultShower = $resultShower;
+        $this->resulter = $resulter;
     }
 
     /// ### Public Functions ### ///
 
-    public function searchForWord(string $search_phrase)                    // This functions splits any term (multiple words possible) into
-    {                                                                       // an array with all single words and looks for them in the index.
-        $search_phrase = $this->normalizer->preprocess($search_phrase);     // Its thought for normal and tag searches, depending on the given index.
+    public function searchForWord(string $search_phrase, bool $tags = false)                 // This functions splits any term (multiple words possible) into an array with all single words and looks for them in the index.
+    {
+        $used_index = $this->index;
+        if ($tags == true) {                                                               // It's made for normal and tag searches, depending on the value of $tags.
+            $used_index = $this->tag_index;
+        }
+
+        $search_phrase = $this->normalizer->preprocess($search_phrase);
         $search_words = $this->tokenizer->preprocess($search_phrase);
         if (count($search_words) == 2) {
-            $combination = $search_words[0] . " " . $search_words[1];
-            $search_words[] = $combination;
+            $combo1 = $search_words[0] . " " . $search_words[1];
+            $search_words[] = $combo1;
         } elseif (count($search_words) == 3) {
             $combo1 = $search_words[0] . " " . $search_words[1];
             $search_words[] = $combo1;
@@ -50,20 +55,20 @@ class SearchEngine
         $results = [];
         if ($this->test == true) {
             foreach ($search_words as $word) {
-                if (array_key_exists($word, $this->index)) {
-                    $results[$word] = $this->index[$word];
+                if (array_key_exists($word, $used_index)) {
+                    $results[$word] = $used_index[$word];
                 }
             }
             return $results;
         } else {
             foreach ($search_words as $word) {
-                if (array_key_exists($word, $this->index)) {
-                    $results[$word] = $this->index[$word];
+                if (array_key_exists($word, $used_index)) {
+                    $results[$word] = $used_index[$word];
                     continue;
                 }
                 $results[$word] = -1.56;
             }
-            $this->showResults($results);
+            $this->resulter->showResults($results);
             return $results;
         }
     }
@@ -80,20 +85,4 @@ class SearchEngine
 
     /// ### Private Functions ### ///
 
-    private function showResults(array $results)
-    {
-        // print_r($results);
-        foreach ($results as $word => $ids) {
-            $output = "Results for $word have been found in module(s) ";
-            if ($results[$word] == -1.56) {
-                echo("No result has been found for '$word'.\n");
-                continue;
-            }
-            foreach ($ids as $id) {
-                $output = $output . $id . ", ";
-            }
-            $output = rtrim($output, ', ');
-            echo($output);
-        }
-    }
 }
