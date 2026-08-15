@@ -67,7 +67,9 @@ $SearchEngine = new SearchEngine($Tokenizer, $Normalizer, $Indexer, $Resulter, $
 $TestEngine = new TestEngine($SearchEngine, $queries);
 
 
-/// $SearchEngine->searchForWord("Datenschutz");
-$TestEngine->runTestQuery(1);
+/// $SearchEngine->searchForWord("Datenschutz Vermittelt");
+/// $TestEngine->runTestQuery(1);
 /// $Indexer->createIndex();
 /// $Indexer->createTagIndex();
+/// $TestEngine->getQueryByID(1);
+$TestEngine->testAgainstTags(1, 1);

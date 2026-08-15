@@ -16,7 +16,7 @@ class Resulter
 
     /// ### Public Functions ### ///
 
-    public function evaluate(array $query_data, array $search_result_ids)
+    public function evaluate(array $query_data, array $search_result_ids)           /// Does not yet work for phrases made of multiple words.
     {
         $expected = array_column($query_data["results"], "content_id");             /// Extracts the expected content_id's from the results entry.
         $matches = array_intersect($expected, $search_result_ids);
@@ -28,16 +28,14 @@ class Resulter
         return ["query_data" => $query_data, "expected" => $expected, "matches" => $matches, "misses" => $misses, "unexpected" => $unexpected];
     }
 
-    public function resultOverview(array $evaluated_data, int $id, bool $test)
+    public function resultOverview(array $evaluated_data, int $id, bool $test, bool $vs_tags = false)
     {
         $query_data = $evaluated_data["query_data"];
         $expected = $evaluated_data["expected"];
         $matches = $evaluated_data["matches"];
         $misses = $evaluated_data["misses"];
         $unexpected = $evaluated_data["unexpected"];
-        if ($test != true) {
-            return;
-        } else {
+        if ($test == true) {
             $this->showTestResults($id, $query_data["query"], $matches, $misses, $unexpected, count($expected));
             $this->calcRelevanceScore($matches, $query_data);
         }
@@ -55,7 +53,7 @@ class Resulter
     {
         foreach ($results as $word => $ids) {
             $output = "Results for $word have been found in module(s) ";
-            if ($results[$word] == -1.56) {
+            if ($results[$word] == [-1.56]) {
                 echo("No result has been found for '$word'.\n");
                 continue;
             }
@@ -63,7 +61,7 @@ class Resulter
                 $output = $output . $id . ", ";
             }
             $output = rtrim($output, ', ');
-            echo($output);
+            echo($output . "\n");
         }
     }
 

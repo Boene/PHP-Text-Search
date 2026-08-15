@@ -161,7 +161,7 @@ class Indexer
 
     private function checkForWord(string $word): bool
     {
-        if (array_key_exists($word, $this->tag_index)) {
+        if (array_key_exists($word, $this->index)) {
             return true;
         } else {
             return false;

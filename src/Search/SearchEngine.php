@@ -66,7 +66,7 @@ class SearchEngine
                     $results[$word] = $used_index[$word];
                     continue;
                 }
-                $results[$word] = -1.56;
+                $results[$word] = [-1.56];
             }
             $this->resulter->showResults($results);
             return $results;

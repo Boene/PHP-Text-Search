@@ -38,22 +38,53 @@ class TestEngine
 
     /// ### Public Functions ### ///
 
-    public function runTestQuery(int $count, int $start = 1)                                /// This function is designed for testing ($test == true) under lab conditions,
-    {                                                                                       /// meaning that the search looks at all the content and has the perfect answers                                                            /// set in advance in the form of a list of ids.
-        for ($i = $start; $i <= $count; $i += 1) {                                          /// With $test == false, it simply returns all the ids of matched content.
+    public function runTestQuery(int $count, int $start = 1, bool $results = true, bool $vs_tags = false)            /// Runs through all specified Queries. Returns all relevant data in case further processing is needed.
+    {
+        $query_data = [];
+        $search_result_ids = [];
+
+        for ($i = $start; $i <= $count; $i += 1) {
             $query_data = $this->getQueryByID($i);
-            $search_result = $this->search_engine->searchForWord($query_data["query"]);
+
+            ### Search in normal or tag based Index, depending on $vs_tags Parameter. ###
+
+            if ($vs_tags == false) {
+                $search_result = $this->search_engine->searchForWord($query_data["query"]);
+            } else {
+                $search_result = $this->search_engine->searchForWord($query_data["query"], $tags = true);
+            }
+
             $search_result_ids = [];
             foreach ($search_result as $word => $ids) {
                 $search_result_ids = array_unique(array_merge($search_result_ids, $ids));
+
+                ### Show results unless $results is manually set to false. ###
+
             }
-            $this->search_engine->resulter->resultOverview($this->search_engine->resulter->evaluate($query_data, $search_result_ids), $i, $this->search_engine->test);
+            if ($results) {
+                $this->search_engine->resulter->resultOverview($this->search_engine->resulter->evaluate($query_data, $search_result_ids), $i, $this->search_engine->test);
+            }
         }
-        $this->search_engine->resulter->totResult();
+        if ($results) {
+            $this->search_engine->resulter->totResult();
+        }
+
+        return $search_result_ids;
     }
 
-    public function testAgainstTags()           /// This function compares the search results without using tags against only using tags, which are considered as truth
+    public function testAgainstTags(int $count, int $start = 1)           /// This function compares the search results without using tags against only using tags, which are considered as truth
     {
+        for ($i = $start; $i <= $count; $i += 1) {
+            $tag_search_result_ids = $this->runTestQuery($i, $i, $results = false, $vs_tags = true);
+            $tag_search_result_ids_formatted = [];
+            foreach ($tag_search_result_ids as $entry => $id) {
+                $tag_search_result_ids_formatted["results"][] = ["content_id" => $id];
+            }
+            $method_search_result_ids = $this->runTestQuery($i, $i, $results = false);
+            $this->search_engine->resulter->resultOverview($this->search_engine->resulter->evaluate($tag_search_result_ids_formatted, $method_search_result_ids), $i, true, true);
+        }
+
+
     }
 
     /// ### Private Functions ### ///
