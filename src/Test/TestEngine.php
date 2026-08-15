@@ -69,19 +69,25 @@ class TestEngine
             $this->search_engine->resulter->totResult();
         }
 
-        return $search_result_ids;
+        return [$search_result_ids, $query_data];
     }
 
     public function testAgainstTags(int $count, int $start = 1)           /// This function compares the search results without using tags against only using tags, which are considered as truth
     {
         for ($i = $start; $i <= $count; $i += 1) {
-            $tag_search_result_ids = $this->runTestQuery($i, $i, $results = false, $vs_tags = true);
+            $tag_search_result = $this->runTestQuery($i, $i, $results = false, $vs_tags = true);
+            $tag_search_result_ids = $tag_search_result[0];
             $tag_search_result_ids_formatted = [];
             foreach ($tag_search_result_ids as $entry => $id) {
                 $tag_search_result_ids_formatted["results"][] = ["content_id" => $id];
             }
-            $method_search_result_ids = $this->runTestQuery($i, $i, $results = false);
-            $this->search_engine->resulter->resultOverview($this->search_engine->resulter->evaluate($tag_search_result_ids_formatted, $method_search_result_ids), $i, true, true);
+
+            $method_search_result = $this->runTestQuery($i, $i, $results = false);
+            $method_search_result_ids = $method_search_result[0];
+
+            $query_data = $method_search_result[1];
+
+            $this->search_engine->resulter->resultOverview($this->search_engine->resulter->evaluate($tag_search_result_ids_formatted, $method_search_result_ids, $query_data), $i, false, true);
         }
 
 

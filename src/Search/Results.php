@@ -16,7 +16,7 @@ class Resulter
 
     /// ### Public Functions ### ///
 
-    public function evaluate(array $query_data, array $search_result_ids)           /// Does not yet work for phrases made of multiple words.
+    public function evaluate(array $query_data, array $search_result_ids, array $query = [])           /// Does not yet work for phrases made of multiple words.
     {
         $expected = array_column($query_data["results"], "content_id");             /// Extracts the expected content_id's from the results entry.
         $matches = array_intersect($expected, $search_result_ids);
@@ -25,19 +25,27 @@ class Resulter
 
         array_push($this->match_rate_list, count($matches) / count($expected));     /// Saves the match% of processed Query for totResult to calc the overall match% at the end.
 
-        return ["query_data" => $query_data, "expected" => $expected, "matches" => $matches, "misses" => $misses, "unexpected" => $unexpected];
+        return ["query_data" => $query_data, "expected" => $expected, "matches" => $matches, "misses" => $misses, "unexpected" => $unexpected, "query" => $query];
     }
 
     public function resultOverview(array $evaluated_data, int $id, bool $test, bool $vs_tags = false)
     {
-        $query_data = $evaluated_data["query_data"];
+        if ($vs_tags) {
+            $query_data = $evaluated_data["query"];
+        } else {
+            $query_data = $evaluated_data["query_data"];
+        }
+
         $expected = $evaluated_data["expected"];
         $matches = $evaluated_data["matches"];
         $misses = $evaluated_data["misses"];
         $unexpected = $evaluated_data["unexpected"];
-        if ($test == true) {
+        if ($test) {
             $this->showTestResults($id, $query_data["query"], $matches, $misses, $unexpected, count($expected));
             $this->calcRelevanceScore($matches, $query_data);
+        }
+        if ($vs_tags) {
+            $this->showTestResults($id, $query_data["query"], $matches, $misses, $unexpected, count($expected));
         }
     }
 
@@ -90,6 +98,11 @@ class Resulter
         echo("Unexpected matches: $unexpected_string\n");
     }
 
+    private function showResultsVsTags()
+    {
+
+    }
+
     private function calcRelevanceScore(array $matches, array $query_data)
     {
         $score = [
@@ -124,6 +137,4 @@ class Resulter
         }
         echo("#################################### \n");
     }
-
-
 }
